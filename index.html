@@ -1215,7 +1215,7 @@
             <a href="https://www.facebook.com/share/1EeivBtWdc/" target="_blank" class="w-9 h-9 rounded-lg dyn-card glass-no-lift flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:facebook" data-width="18"></span></a>
             <a href="https://www.instagram.com/eiqaa_marketing?igsh=YndzeW42NWFvY2p4" target="_blank" class="w-9 h-9 rounded-lg dyn-card glass-no-lift flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:instagram" data-width="18"></span></a>
             <a href="https://www.tiktok.com/@eiqaamarketing?_r=1&_t=ZS-98T8NvILn50" target="_blank" class="w-9 h-9 rounded-lg dyn-card glass-no-lift flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="simple-icons:tiktok" data-width="18"></span></a>
-            <a href="https://www.linkedin.com/in/eiqaa-al-athar-marketing-management-321287426" target="_blank" class="w-9 h-9 rounded-lg dyn-card glass-no-lift flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:linkedin" data-width="18"></span></a>
+            <a href="https://www.linkedin.com/company/eiqaa-al-athar-marketing-management/" target="_blank" class="w-9 h-9 rounded-lg dyn-card glass-no-lift flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:linkedin" data-width="18"></span></a>
           </div>
         </div>
         <div>
@@ -1496,6 +1496,7 @@
 
     // ===== ROI CALCULATOR =====
     function formatAED(n) {
+      if (!isFinite(n) || n < 0) n = 0;
       return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'K' : Math.round(n).toLocaleString();
     }
     function calcROI() {
@@ -1504,7 +1505,7 @@
       const leads = parseFloat(document.getElementById('calcLeads').value) || 0;
       const conv = parseFloat(document.getElementById('calcConv').value) || 0;
       const customers = leads * conv / 100;
-      const revenuePerCustomer = customers > 0 ? revenue / customers : 0;
+      const avgValue = sale > 0 ? sale : (customers > 0 ? revenue / customers : 0);
 
       const scenarios = [
         { leads: 1.10, conv: 1.00, id: 'Conserv' },
@@ -1515,9 +1516,9 @@
       const results = {};
       scenarios.forEach(s => {
         const newCustomers = leads * s.leads * conv * s.conv / 100;
-        const extra = (newCustomers - customers) * (revenuePerCustomer || sale);
-        results[s.id] = extra;
-        maxExtra = Math.max(maxExtra, extra);
+        const extra = (newCustomers - customers) * avgValue;
+        results[s.id] = isFinite(extra) && extra > 0 ? extra : 0;
+        maxExtra = Math.max(maxExtra, results[s.id]);
       });
       document.getElementById('calcResult').textContent = '+AED ' + formatAED(results.Aggressive);
       document.getElementById('calcConserv').textContent = '+AED ' + formatAED(results.Conserv);
@@ -1527,6 +1528,10 @@
         document.getElementById('calcConservBar').style.width = Math.max(5, results.Conserv / maxExtra * 100) + '%';
         document.getElementById('calcModerateBar').style.width = Math.max(8, results.Moderate / maxExtra * 100) + '%';
         document.getElementById('calcAggressiveBar').style.width = '100%';
+      } else {
+        document.getElementById('calcConservBar').style.width = '0%';
+        document.getElementById('calcModerateBar').style.width = '0%';
+        document.getElementById('calcAggressiveBar').style.width = '0%';
       }
     }
     ['calcRevenue','calcSale','calcLeads','calcConv'].forEach(id => {
