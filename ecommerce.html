@@ -152,9 +152,11 @@
     .light-mode .pay-chip { background: rgba(91,33,182,0.05); border-color: rgba(91,33,182,0.15); }
 
     /* ===== SLIDESHOW ===== */
-    .slider-shell { position: relative; overflow: hidden; border-radius: 1.25rem; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 44px rgba(139,92,246,0.18); }
-    .slider-track { display: flex; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
-    .slider-slide { min-width: 100%; }
+    .slider-shell { position: relative; overflow: hidden; border-radius: 1.25rem; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 44px rgba(139,92,246,0.18); background: #0D0018; }
+    .slider-shell.shell-mobile { width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 1/1; }
+    .slider-shell.shell-desktop { display: none; }
+    .slider-track { display: flex; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); height: 100%; }
+    .slider-slide { min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
     .slider-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 20; width: 44px; height: 44px; border-radius: 50%; background: rgba(13,0,24,0.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; opacity: 0; }
     .slider-shell:hover .slider-btn { opacity: 1; }
@@ -167,6 +169,7 @@
     .light-mode .slider-btn { background: rgba(91,33,182,0.5); }
     .light-mode .slider-dot { background: rgba(91,33,182,0.4); }
     @media (max-width: 768px) { .slider-btn { width: 36px; height: 36px; opacity: 1; } .slider-dot { width: 8px; height: 8px; } .slider-dot.active { width: 20px; } }
+    @media (min-width: 769px) { #slideshow { overflow-x: hidden; } .slider-shell.shell-mobile { display: none; } .slider-shell.shell-desktop { display: block; max-width: none; width: 100vw; margin-left: calc(50% - 50vw); aspect-ratio: 16/9; } .slider-slide img { width: 100%; height: 100%; object-fit: cover; } }
   </style>
 </head>
 <body class="dark font-inter">
@@ -296,7 +299,7 @@
         <p class="text-xs font-bold text-gm-400 tracking-[0.25em] uppercase mb-3" data-ar="معرض أعمالنا" data-en="Our Work">Our Work</p>
         <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-3"><span data-ar="لقطات تصنع" data-en="Visuals That">Visuals That</span> <span class="gradient-text" data-ar="الأثر" data-en="Make The Impact">Make The Impact</span></h2>
       </div>
-      <div class="reveal slider-shell" dir="ltr" style="width:100%; max-width:640px; margin-inline:auto; aspect-ratio:1/1;">
+      <div class="reveal slider-shell shell-mobile" dir="ltr">
         <div class="slider-track" id="sliderTrack">
           <div class="slider-slide"><img src="slide1.webp" alt="EIQAA Al Athar marketing slideshow 1" loading="lazy"></div>
           <div class="slider-slide"><img src="slide2.webp" alt="EIQAA Al Athar marketing slideshow 2" loading="lazy"></div>
@@ -304,9 +307,22 @@
           <div class="slider-slide"><img src="slide4.webp" alt="EIQAA Al Athar marketing slideshow 4" loading="lazy"></div>
           <div class="slider-slide"><img src="slide5.webp" alt="EIQAA Al Athar marketing slideshow 5" loading="lazy"></div>
         </div>
-        <button class="slider-btn prev" onclick="slideMove(-1)" aria-label="Previous slide"><span class="iconify" data-icon="lucide:chevron-left" data-width="22"></span></button>
-        <button class="slider-btn next" onclick="slideMove(1)" aria-label="Next slide"><span class="iconify" data-icon="lucide:chevron-right" data-width="22"></span></button>
+        <button class="slider-btn prev" aria-label="Previous slide"><span class="iconify" data-icon="lucide:chevron-left" data-width="22"></span></button>
+        <button class="slider-btn next" aria-label="Next slide"><span class="iconify" data-icon="lucide:chevron-right" data-width="22"></span></button>
         <div class="slider-dots" id="sliderDots"></div>
+      </div>
+      <div class="reveal slider-shell shell-desktop" dir="ltr">
+        <div class="slider-track" id="sliderTrackD">
+          <div class="slider-slide"><img src="slide-desktop1.webp" alt="EIQAA Al Athar desktop slideshow 1" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide-desktop2.webp" alt="EIQAA Al Athar desktop slideshow 2" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide-desktop3.webp" alt="EIQAA Al Athar desktop slideshow 3" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide-desktop4.webp" alt="EIQAA Al Athar desktop slideshow 4" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide-desktop5.webp" alt="EIQAA Al Athar desktop slideshow 5" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide-desktop6.webp" alt="EIQAA Al Athar desktop slideshow 6" loading="lazy"></div>
+        </div>
+        <button class="slider-btn prev" aria-label="Previous slide"><span class="iconify" data-icon="lucide:chevron-left" data-width="22"></span></button>
+        <button class="slider-btn next" aria-label="Next slide"><span class="iconify" data-icon="lucide:chevron-right" data-width="22"></span></button>
+        <div class="slider-dots" id="sliderDotsD"></div>
       </div>
     </div>
   </section>
@@ -719,11 +735,11 @@
     });
 
     // ===== SLIDESHOW =====
-    const sliderTrack = document.getElementById('sliderTrack');
-    if (sliderTrack) {
-      const total = sliderTrack.children.length;
-      const dotsBox = document.getElementById('sliderDots');
-      const shell = sliderTrack.closest('.slider-shell');
+    document.querySelectorAll('.slider-shell').forEach((shell) => {
+      const track = shell.querySelector('.slider-track');
+      if (!track) return;
+      const total = track.children.length;
+      const dotsBox = shell.querySelector('.slider-dots');
       let index = 0, timer = null;
       const dots = [];
       for (let i = 0; i < total; i++) {
@@ -736,10 +752,14 @@
       }
       function goToSlide(i) {
         index = (i + total) % total;
-        sliderTrack.style.transform = 'translateX(-' + (index * 100) + '%)';
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
         dots.forEach((d, j) => d.classList.toggle('active', j === index));
       }
       function slideMove(dir) { goToSlide(index + dir); }
+      const btnPrev = shell.querySelector('.slider-btn.prev');
+      const btnNext = shell.querySelector('.slider-btn.next');
+      if (btnPrev) btnPrev.addEventListener('click', () => slideMove(-1));
+      if (btnNext) btnNext.addEventListener('click', () => slideMove(1));
       function startAuto() { stopAuto(); timer = setInterval(() => goToSlide(index + 1), 4500); }
       function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
       shell.addEventListener('mouseenter', stopAuto);
@@ -753,7 +773,7 @@
         touchX = null;
       }, { passive: true });
       startAuto();
-    }
+    });
 
     // ===== EIQAA ASSISTANT CHATBOT =====
     const eqEls = {
