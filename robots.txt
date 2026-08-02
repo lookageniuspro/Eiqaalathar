@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lookageniuspro.github.io/Eiqaalathar/sitemap.xml
+Sitemap: https://lookageniuspro.github.io/Eiqaalathar/sitemap-blog.xml
+Sitemap: https://lookageniuspro.github.io/Eiqaalathar/sitemap-store.xml

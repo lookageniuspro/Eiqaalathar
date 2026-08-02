@@ -1,0 +1,7 @@
+# Redirects — تفعيل عند إطلاق العناوين الجديدة (يدعم GitHub Pages)
+# الصيغة:  /المسار_القديم  /المسار_الجديد  301
+
+# أمثلة جاهزة (فك التعليق عند الحاجة):
+# /ecommerce.html  /services/ecommerce-dropshipping  301
+# /blog.html  /blog  301
+# /index.html  /  301

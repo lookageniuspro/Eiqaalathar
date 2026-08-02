@@ -1,0 +1,13 @@
+# GitHub Pages headers — تحسين التخزين المؤقت والأمان
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# صفحات HTML: تخزين مؤقت قصير حتى تصل التحديثات بسرعة
+/*.html
+  Cache-Control: public, max-age=3600
+
+# الشعار والأصول الثابتة: تخزين طويل
+/logo.jpeg
+  Cache-Control: public, max-age=604800
