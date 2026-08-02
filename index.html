@@ -263,6 +263,23 @@
     .light-mode .marquee-item { background: linear-gradient(135deg, rgba(91,33,182,0.07), rgba(91,33,182,0.02)); border-color: rgba(91,33,182,0.15); box-shadow: 0 4px 20px rgba(91,33,182,0.08), inset 0 1px 0 rgba(255,255,255,0.8); }
     .light-mode .marquee-item::after { background: linear-gradient(90deg, transparent, rgba(139,92,246,0.18), transparent); }
     .light-mode .marquee-item:hover { border-color: rgba(245,183,0,0.6); box-shadow: 0 0 22px rgba(139,92,246,0.25), 0 0 40px rgba(245,183,0,0.15); }
+
+    /* ===== SLIDESHOW ===== */
+    .slider-shell { position: relative; overflow: hidden; border-radius: 1.25rem; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 44px rgba(139,92,246,0.18); }
+    .slider-track { display: flex; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .slider-slide { min-width: 100%; }
+    .slider-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 20; width: 44px; height: 44px; border-radius: 50%; background: rgba(13,0,24,0.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; opacity: 0; }
+    .slider-shell:hover .slider-btn { opacity: 1; }
+    .slider-btn:hover { background: #F5B700; color: #1A1A1A; border-color: #F5B700; transform: translateY(-50%) scale(1.08); }
+    .slider-btn.prev { left: 14px; }
+    .slider-btn.next { right: 14px; }
+    .slider-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 20; }
+    .slider-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); border: none; cursor: pointer; transition: all 0.3s; padding: 0; }
+    .slider-dot.active { background: #F5B700; width: 26px; border-radius: 6px; }
+    .light-mode .slider-btn { background: rgba(91,33,182,0.5); }
+    .light-mode .slider-dot { background: rgba(91,33,182,0.4); }
+    @media (max-width: 768px) { .slider-btn { width: 36px; height: 36px; opacity: 1; } .slider-dot { width: 8px; height: 8px; } .slider-dot.active { width: 20px; } }
   </style>
 </head>
 <body class="dark font-inter">
@@ -399,7 +416,7 @@
     <div class="relative max-w-5xl mx-auto">
       <div class="reveal text-center mb-8">
         <p class="text-xs font-bold text-gm-400 tracking-[0.25em] uppercase mb-3" data-ar="عنصر تفاعلي" data-en="Interactive">Interactive</p>
-        <h2 class="text-2xl md:text-4xl font-black tracking-tight text-white mb-3"><span data-ar="لمس واستكشف" data-en="Touch & Explore">Touch & Explore</span> <span class="gradient-text-gold" data-ar="عالم إيقاع الأثر" data-en="The EIQAA World">The EIQAA World</span></h2>
+        <h2 class="text-2xl md:text-4xl font-black tracking-tight text-white mb-3"><span data-ar="إلمس واستكشف" data-en="Touch & Explore">Touch & Explore</span> <span class="gradient-text-gold" data-ar="عالم إيقاع الأثر" data-en="The EIQAA World">The EIQAA World</span></h2>
         <p class="text-xs md:text-sm text-rp-200 max-w-xl mx-auto" data-ar="اضغط على أي دائرة للانتقال إلى القسم الخاص بالخدمة. حرّك الماوس فوق المنطقة لإيقاف الحركة مؤقتاً."
           data-en="Click any circle to jump to its service section. Hover over the area to pause the animation.">Click any circle to jump to its service section. Hover over the area to pause the animation.</p>
       </div>
@@ -473,6 +490,28 @@
         <button id="rippleRestart" class="ripple-restart" onclick="restartRipple()" title="Replay">
           <span class="iconify" data-icon="lucide:rotate-ccw" data-width="18"></span>
         </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SLIDESHOW ========== -->
+  <section id="slideshow" class="relative py-16 px-5">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-8">
+        <p class="text-xs font-bold text-gm-400 tracking-[0.25em] uppercase mb-3" data-ar="معرض أعمالنا" data-en="Our Work">Our Work</p>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-3"><span data-ar="لقطات تصنع" data-en="Visuals That">Visuals That</span> <span class="gradient-text" data-ar="الأثر" data-en="Make The Impact">Make The Impact</span></h2>
+      </div>
+      <div class="reveal slider-shell" dir="ltr" style="width:100%; max-width:640px; margin-inline:auto; aspect-ratio:1/1;">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slider-slide"><img src="slide1.webp" alt="EIQAA Al Athar marketing slideshow 1" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide2.webp" alt="EIQAA Al Athar marketing slideshow 2" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide3.webp" alt="EIQAA Al Athar marketing slideshow 3" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide4.webp" alt="EIQAA Al Athar marketing slideshow 4" loading="lazy"></div>
+          <div class="slider-slide"><img src="slide5.webp" alt="EIQAA Al Athar marketing slideshow 5" loading="lazy"></div>
+        </div>
+        <button class="slider-btn prev" onclick="slideMove(-1)" aria-label="Previous slide"><span class="iconify" data-icon="lucide:chevron-left" data-width="22"></span></button>
+        <button class="slider-btn next" onclick="slideMove(1)" aria-label="Next slide"><span class="iconify" data-icon="lucide:chevron-right" data-width="22"></span></button>
+        <div class="slider-dots" id="sliderDots"></div>
       </div>
     </div>
   </section>
@@ -964,62 +1003,112 @@
         <p class="dyn-text2 text-sm md:text-base max-w-2xl mx-auto" data-ar="كل تعاقد يبدأ بعرض مخصص لأهدافك. لا أسعار موحدة."
           data-en="Every engagement starts with a proposal tailored to your goals. No one-size-fits-all pricing.">Every engagement starts with a proposal tailored to your goals. No one-size-fits-all pricing.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start">
-        <div class="reveal dyn-card rounded-xl p-6">
-          <p class="text-xs font-black text-rp-400 uppercase tracking-widest mb-1">Starter</p>
-          <p class="text-2xl font-black mb-4" data-ar="للأعمال الناشئة والجديدة" data-en="For New & Early-Stage Businesses">For New & Early-Stage Businesses</p>
-          <div class="space-y-2 mb-5 text-sm">
-            <p class="dyn-text2" data-ar="أساس استراتيجية التسويق" data-en="✓ Marketing strategy foundation">✓ Marketing strategy foundation</p>
-            <p class="dyn-text2" data-ar="منصة أو منصتان سوشيال" data-en="✓ 1–2 social platforms">✓ 1–2 social platforms</p>
-            <p class="dyn-text2" data-ar="إعداد صفحة هبوط" data-en="✓ Landing page setup">✓ Landing page setup</p>
-            <p class="dyn-text2" data-ar="تقرير أداء شهري" data-en="✓ Monthly performance report">✓ Monthly performance report</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
+        <div class="reveal dyn-card rounded-2xl p-6 relative pricing-glow" style="transition-delay:0ms; box-shadow: 0 0 34px rgba(139,92,246,0.28), 0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.10);">
+          <p class="text-xs font-black text-rp-400 uppercase tracking-widest mb-1">Essential Presence</p>
+          <p class="text-sm font-bold dyn-text mb-4" data-ar="للمشاريع الناشئة التي تبني حضوراً رقمياً احترافياً" data-en="For startups building a professional digital presence">For startups building a professional digital presence</p>
+          <p class="text-[10px] uppercase tracking-wider dyn-text3 mb-1" data-ar="ابتداءً من" data-en="Starting From">Starting From</p>
+          <p class="text-3xl font-black mb-1"><span class="gradient-text-gold">AED 1,999</span></p>
+          <p class="text-xs dyn-text3 mb-4" data-ar="/ شهرياً" data-en="/ Month">/ Month</p>
+          <div class="space-y-1.5 mb-5 text-[13px]">
+            <p class="dyn-text2" data-ar="✓ جلسة استراتيجية تسويقية" data-en="✓ Marketing strategy session">✓ Marketing strategy session</p>
+            <p class="dyn-text2" data-ar="✓ إدارة السوشيال ميديا" data-en="✓ Social media management">✓ Social media management</p>
+            <p class="dyn-text2" data-ar="✓ 12 منشوراً مميزاً" data-en="✓ 12 premium posts">✓ 12 premium posts</p>
+            <p class="dyn-text2" data-ar="✓ 12 ستوري" data-en="✓ 12 stories">✓ 12 stories</p>
+            <p class="dyn-text2" data-ar="✓ صياغة محتوى احترافية" data-en="✓ Professional copywriting">✓ Professional copywriting</p>
+            <p class="dyn-text2" data-ar="✓ تصميم جرافيك" data-en="✓ Graphic design">✓ Graphic design</p>
+            <p class="dyn-text2" data-ar="✓ تقويم محتوى" data-en="✓ Content calendar">✓ Content calendar</p>
+            <p class="dyn-text2" data-ar="✓ تقرير أداء شهري" data-en="✓ Monthly performance report">✓ Monthly performance report</p>
+            <p class="dyn-text2" data-ar="✓ دعم عبر واتساب" data-en="✓ WhatsApp support">✓ WhatsApp support</p>
           </div>
-          <p class="text-xs dyn-text3 mb-1"><span data-ar="مناسب لـ: " data-en="Best For: ">Best For: </span><span class="dyn-text font-semibold" data-ar="الشركات الناشئة التي تؤسس أول نظام لها" data-en="Startups establishing their first system">Startups establishing their first system</span></p>
-          <p class="text-xs dyn-text3 mb-5"><span data-ar="المدة الزمنية: " data-en="Timeline: ">Timeline: </span><span class="dyn-text font-semibold" data-ar="4–6 أسابيع لأول النتائج" data-en="4–6 weeks to first results">4–6 weeks to first results</span></p>
-          <a href="#" target="_blank" data-wa-plan="Starter" class="block text-center w-full py-3 rounded-lg dyn-card dyn-text text-sm font-bold transition-all hover:opacity-80" data-ar="اطلب عرضاً →" data-en="Request Proposal →">Request Proposal →</a>
-        </div>
-        <div class="reveal dyn-card rounded-xl p-6" style="transition-delay:80ms">
-          <p class="text-xs font-black text-gm-400 uppercase tracking-widest mb-1">Growth</p>
-          <p class="text-2xl font-black mb-4" data-ar="للأعمال النامية الجاهزة للتوسع" data-en="For Growing Businesses Ready To Scale">For Growing Businesses Ready To Scale</p>
-          <div class="space-y-2 mb-5 text-sm">
-            <p class="dyn-text2" data-ar="استراتيجية نمو وتموضع كاملة" data-en="✓ Full growth strategy & positioning">✓ Full growth strategy & positioning</p>
-            <p class="dyn-text2" data-ar="2+ منصات سوشيال" data-en="✓ 2+ social platforms">✓ 2+ social platforms</p>
-            <p class="dyn-text2" data-ar="إدارة الإعلانات المدفوعة" data-en="✓ Paid ads management">✓ Paid ads management</p>
-            <p class="dyn-text2" data-ar="قمع مبيعات وأتمتة" data-en="✓ Sales funnel & automation">✓ Sales funnel & automation</p>
-            <p class="dyn-text2" data-ar="تحليلات وتحسين أسبوعي" data-en="✓ Weekly analytics & optimization">✓ Weekly analytics & optimization</p>
+          <p class="text-xs dyn-text3 mb-2"><span data-ar="مناسب لـ: " data-en="Ideal for: ">Ideal for: </span></p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="المشاريع الناشئة" data-en="Startups">Startups</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="الأعمال المحلية" data-en="Local Businesses">Local Businesses</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="العلامات الشخصية" data-en="Personal Brands">Personal Brands</span>
           </div>
-          <p class="text-xs dyn-text3 mb-1"><span data-ar="مناسب لـ: " data-en="Best For: ">Best For: </span><span class="dyn-text font-semibold" data-ar="الشركات التي حققت توافق المنتج مع السوق" data-en="Businesses with product-market fit">Businesses with product-market fit</span></p>
-          <p class="text-xs dyn-text3 mb-5"><span data-ar="المدة الزمنية: " data-en="Timeline: ">Timeline: </span><span class="dyn-text font-semibold" data-ar="30–60 يوماً لتحسن ملموس" data-en="30–60 days to measurable lift">30–60 days to measurable lift</span></p>
-          <a href="#" target="_blank" data-wa-plan="Growth" class="block text-center w-full py-3 rounded-lg dyn-card dyn-text text-sm font-bold transition-all hover:opacity-80" data-ar="اطلب عرضاً →" data-en="Request Proposal →">Request Proposal →</a>
+          <a href="#" target="_blank" data-wa-plan="Essential Presence" class="btn-gold block text-center w-full py-3 rounded-lg bg-gm-400 text-rp-950 text-sm font-black hover:bg-gm-300 transition-all" data-ar="ابدأ بناء علامتك →" data-en="Start Building Your Brand →">Start Building Your Brand →</a>
         </div>
-        <div class="reveal rounded-xl p-6 relative border-2 border-gm-400/60 brand-gradient text-white shadow-xl shadow-rp-900/40 pricing-glow" style="transition-delay:160ms">
+        <div class="reveal rounded-2xl p-6 relative border-2 border-gm-400/60 brand-gradient text-white shadow-xl shadow-rp-900/40 pricing-glow" style="transition-delay:80ms; box-shadow: 0 0 44px rgba(245,183,0,0.30), 0 0 80px rgba(139,92,246,0.20), 0 16px 44px rgba(0,0,0,0.35);">
           <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gm-400 text-rp-950 text-[10px] font-black px-4 py-1 rounded-full whitespace-nowrap" data-ar="⭐ الأكثر طلباً" data-en="⭐ MOST POPULAR">⭐ MOST POPULAR</div>
-          <p class="text-xs font-black text-gm-300 uppercase tracking-widest mb-1">Scale</p>
-          <p class="text-2xl font-black mb-4" data-ar="للعلامات الراسخة" data-en="For Established Brands Dominating">For Established Brands Dominating</p>
-          <div class="space-y-2 mb-5 text-sm">
-            <p class="text-rp-100" data-ar="كل ما في Growth" data-en="✓ Everything in Growth">✓ Everything in Growth</p>
-            <p class="text-rp-100" data-ar="أتمتة ذكاء اصطناعي متقدمة وCRM" data-en="✓ Advanced AI automation & CRM">✓ Advanced AI automation & CRM</p>
-            <p class="text-rp-100" data-ar="مدير حساب مخصص" data-en="✓ Dedicated account manager">✓ Dedicated account manager</p>
-            <p class="text-rp-100" data-ar="إدارة مسار تحويل كاملة" data-en="✓ Full-funnel management">✓ Full-funnel management</p>
-            <p class="text-rp-100" data-ar="جلسات استراتيجية شهرية" data-en="✓ Monthly strategy sessions">✓ Monthly strategy sessions</p>
+          <p class="text-xs font-black text-gm-300 uppercase tracking-widest mb-1">Growth Accelerator</p>
+          <p class="text-sm font-bold mb-4" data-ar="للأعمال الجاهزة لتوليد عملاء محتملين باستمرار" data-en="For businesses ready to generate consistent leads">For businesses ready to generate consistent leads</p>
+          <p class="text-[10px] uppercase tracking-wider text-rp-200 mb-1" data-ar="ابتداءً من" data-en="Starting From">Starting From</p>
+          <p class="text-3xl font-black mb-1">AED 3,999</p>
+          <p class="text-xs text-rp-200 mb-4" data-ar="/ شهرياً" data-en="/ Month">/ Month</p>
+          <div class="space-y-1.5 mb-5 text-[13px]">
+            <p class="text-rp-100 font-semibold" data-ar="كل ما في Essential" data-en="✓ Everything in Essential">✓ Everything in Essential</p>
+            <p class="text-rp-100" data-ar="✓ إدارة إعلانات ميتا" data-en="✓ Meta ads management">✓ Meta ads management</p>
+            <p class="text-rp-100" data-ar="✓ حملات توليد العملاء" data-en="✓ Lead generation campaigns">✓ Lead generation campaigns</p>
+            <p class="text-rp-100" data-ar="✓ تحسين صفحات الهبوط" data-en="✓ Landing page optimization">✓ Landing page optimization</p>
+            <p class="text-rp-100" data-ar="✓ استراتيجية قمع المبيعات" data-en="✓ Sales funnel strategy">✓ Sales funnel strategy</p>
+            <p class="text-rp-100" data-ar="✓ تتبع التحويلات" data-en="✓ Conversion tracking">✓ Conversion tracking</p>
+            <p class="text-rp-100" data-ar="✓ ربط CRM" data-en="✓ CRM integration">✓ CRM integration</p>
+            <p class="text-rp-100" data-ar="✓ أتمتة تسويق بالذكاء الاصطناعي" data-en="✓ AI marketing automation">✓ AI marketing automation</p>
+            <p class="text-rp-100" data-ar="✓ تحسين أسبوعي" data-en="✓ Weekly optimization">✓ Weekly optimization</p>
+            <p class="text-rp-100" data-ar="✓ اجتماع استراتيجي شهري" data-en="✓ Monthly strategy meeting">✓ Monthly strategy meeting</p>
           </div>
-          <p class="text-xs text-rp-200 mb-1"><span data-ar="مناسب لـ: " data-en="Best For: ">Best For: </span><span class="text-white font-semibold" data-ar="العلامات الجاهزة للهيمنة على سوقها" data-en="Brands ready to dominate their market">Brands ready to dominate their market</span></p>
-          <p class="text-xs text-rp-200 mb-5"><span data-ar="المدة الزمنية: " data-en="Timeline: ">Timeline: </span><span class="text-white font-semibold" data-ar="خطط نمو ربع سنوية" data-en="Quarterly growth plans">Quarterly growth plans</span></p>
-          <a href="#" target="_blank" data-wa-plan="Scale" class="btn-gold block text-center w-full py-3 rounded-lg bg-gm-400 text-rp-950 text-sm font-black hover:bg-gm-300 transition-all" data-ar="اطلب عرضاً →" data-en="Request Proposal →">Request Proposal →</a>
+          <p class="text-xs text-rp-200 mb-2"><span data-ar="مناسب لـ: " data-en="Ideal for: ">Ideal for: </span></p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/40 bg-gm-400/10 text-gm-300" data-ar="الشركات الصغيرة والمتوسطة" data-en="SMEs">SMEs</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/40 bg-gm-400/10 text-gm-300" data-ar="العيادات" data-en="Clinics">Clinics</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/40 bg-gm-400/10 text-gm-300" data-ar="المطاعم" data-en="Restaurants">Restaurants</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/40 bg-gm-400/10 text-gm-300" data-ar="العقارات" data-en="Real Estate">Real Estate</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/40 bg-gm-400/10 text-gm-300" data-ar="التعليم" data-en="Education">Education</span>
+          </div>
+          <a href="#" target="_blank" data-wa-plan="Growth Accelerator" class="btn-gold block text-center w-full py-3 rounded-lg bg-gm-400 text-rp-950 text-sm font-black hover:bg-gm-300 transition-all" data-ar="نمِّ أعمالي →" data-en="Grow My Business →">Grow My Business →</a>
         </div>
-        <div class="reveal dyn-card rounded-xl p-6" style="transition-delay:240ms">
-          <p class="text-xs font-black text-rp-400 uppercase tracking-widest mb-1">Enterprise</p>
-          <p class="text-2xl font-black mb-4" data-ar="للمؤسسات ذات الطموحات الكبيرة" data-en="For Organizations With Big Ambitions">For Organizations With Big Ambitions</p>
-          <div class="space-y-2 mb-5 text-sm">
-            <p class="dyn-text2" data-ar="كل ما في Scale" data-en="✓ Everything in Scale">✓ Everything in Scale</p>
-            <p class="dyn-text2" data-ar="حملات متعددة الأسواق" data-en="✓ Multi-market campaigns">✓ Multi-market campaigns</p>
-            <p class="dyn-text2" data-ar="تحليلات ولوحات مخصصة" data-en="✓ Custom analytics & dashboards">✓ Custom analytics & dashboards</p>
-            <p class="dyn-text2" data-ar="استشارات على مستوى القيادة" data-en="✓ Executive-level consulting">✓ Executive-level consulting</p>
-            <p class="dyn-text2" data-ar="فريق نمو مخصص" data-en="✓ Dedicated growth team">✓ Dedicated growth team</p>
+        <div class="reveal dyn-card rounded-2xl p-6 relative pricing-glow" style="transition-delay:160ms; box-shadow: 0 0 34px rgba(139,92,246,0.28), 0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.10);">
+          <p class="text-xs font-black text-rp-400 uppercase tracking-widest mb-1">Performance Scale</p>
+          <p class="text-sm font-bold dyn-text mb-4" data-ar="للأعمال التي تركز على نمو إيرادات قابل للقياس" data-en="For businesses focused on measurable revenue growth">For businesses focused on measurable revenue growth</p>
+          <p class="text-[10px] uppercase tracking-wider dyn-text3 mb-1" data-ar="ابتداءً من" data-en="Starting From">Starting From</p>
+          <p class="text-3xl font-black mb-1"><span class="gradient-text-gold">AED 6,999</span></p>
+          <p class="text-xs dyn-text3 mb-4" data-ar="/ شهرياً" data-en="/ Month">/ Month</p>
+          <div class="space-y-1.5 mb-5 text-[13px]">
+            <p class="dyn-text2 font-semibold" data-ar="كل ما في Growth Accelerator" data-en="✓ Everything in Growth Accelerator">✓ Everything in Growth Accelerator</p>
+            <p class="dyn-text2" data-ar="✓ إعلانات متعددة المنصات (ميتا + جوجل + لينكد إن)" data-en="✓ Multi-platform ads (Meta + Google + LinkedIn)">✓ Multi-platform ads (Meta + Google + LinkedIn)</p>
+            <p class="dyn-text2" data-ar="✓ قمع مبيعات متقدم" data-en="✓ Advanced sales funnels">✓ Advanced sales funnels</p>
+            <p class="dyn-text2" data-ar="✓ أتمتة البريد الإلكتروني" data-en="✓ Email automation">✓ Email automation</p>
+            <p class="dyn-text2" data-ar="✓ رعاية العملاء المحتملين" data-en="✓ Lead nurturing">✓ Lead nurturing</p>
+            <p class="dyn-text2" data-ar="✓ أتمتة رحلة العميل" data-en="✓ Customer journey automation">✓ Customer journey automation</p>
+            <p class="dyn-text2" data-ar="✓ لوحات وتقارير مؤشرات الأداء" data-en="✓ Dashboard &amp; KPI reporting">✓ Dashboard &amp; KPI reporting</p>
+            <p class="dyn-text2" data-ar="✓ أساس SEO" data-en="✓ SEO foundation">✓ SEO foundation</p>
+            <p class="dyn-text2" data-ar="✓ تحسين معدل التحويل CRO" data-en="✓ CRO optimization">✓ CRO optimization</p>
+            <p class="dyn-text2" data-ar="✓ مدير حساب مخصص" data-en="✓ Dedicated account manager">✓ Dedicated account manager</p>
           </div>
-          <p class="text-xs dyn-text3 mb-1"><span data-ar="مناسب لـ: " data-en="Best For: ">Best For: </span><span class="dyn-text font-semibold" data-ar="المؤسسات التي تتوسع عبر مناطق" data-en="Enterprises scaling across regions">Enterprises scaling across regions</span></p>
-          <p class="text-xs dyn-text3 mb-5"><span data-ar="المدة الزمنية: " data-en="Timeline: ">Timeline: </span><span class="dyn-text font-semibold" data-ar="خارطة طريق مخصصة" data-en="Custom roadmap">Custom roadmap</span></p>
-          <a href="#" target="_blank" data-wa-plan="Enterprise" class="block text-center w-full py-3 rounded-lg dyn-card dyn-text text-sm font-bold transition-all hover:opacity-80" data-ar="اطلب عرضاً →" data-en="Request Proposal →">Request Proposal →</a>
+          <p class="text-xs dyn-text3 mb-2"><span data-ar="مناسب لـ: " data-en="Ideal for: ">Ideal for: </span></p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="الشركات النامية" data-en="Growing Companies">Growing Companies</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="التجارة الإلكترونية" data-en="E-commerce">E-commerce</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="الشركات الكبرى" data-en="Corporate Businesses">Corporate Businesses</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-white/15 bg-white/5 dyn-text2" data-ar="الخدمات عالية القيمة" data-en="High-Ticket Services">High-Ticket Services</span>
+          </div>
+          <a href="#" target="_blank" data-wa-plan="Performance Scale" class="btn-gold block text-center w-full py-3 rounded-lg bg-gm-400 text-rp-950 text-sm font-black hover:bg-gm-300 transition-all" data-ar="توسّع أسرع →" data-en="Scale Faster →">Scale Faster →</a>
+        </div>
+        <div class="reveal dyn-card rounded-2xl p-6 relative pricing-glow" style="transition-delay:240ms; box-shadow: 0 0 34px rgba(245,183,0,0.22), 0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.10); border-color: rgba(245,183,0,0.35);">
+          <p class="text-xs font-black text-gm-400 uppercase tracking-widest mb-1">Enterprise Growth System</p>
+          <p class="text-sm font-bold dyn-text mb-4" data-ar="للشركات التي تحتاج قسم تسويق خارجياً متكاملاً" data-en="For companies requiring a complete outsourced marketing department">For companies requiring a complete outsourced marketing department</p>
+          <p class="text-[10px] uppercase tracking-wider dyn-text3 mb-1" data-ar="حل مخصص" data-en="Custom Solution">Custom Solution</p>
+          <p class="text-3xl font-black mb-1"><span class="gradient-text-gold" data-ar="سعر مخصص" data-en="Custom Pricing">Custom Pricing</span></p>
+          <p class="text-xs dyn-text3 mb-4">&nbsp;</p>
+          <div class="space-y-1.5 mb-5 text-[13px]">
+            <p class="dyn-text2" data-ar="✓ مدير تسويق جزئي (Fractional CMO)" data-en="✓ Fractional marketing director">✓ Fractional marketing director</p>
+            <p class="dyn-text2" data-ar="✓ إدارة تسويق كاملة" data-en="✓ Complete marketing management">✓ Complete marketing management</p>
+            <p class="dyn-text2" data-ar="✓ خارطة نمو الأعمال" data-en="✓ Business growth roadmap">✓ Business growth roadmap</p>
+            <p class="dyn-text2" data-ar="✓ تكامل الذكاء الاصطناعي" data-en="✓ AI integration">✓ AI integration</p>
+            <p class="dyn-text2" data-ar="✓ إعداد CRM" data-en="✓ CRM setup">✓ CRM setup</p>
+            <p class="dyn-text2" data-ar="✓ أنظمة الأتمتة" data-en="✓ Automation systems">✓ Automation systems</p>
+            <p class="dyn-text2" data-ar="✓ تحليلات متقدمة" data-en="✓ Advanced analytics">✓ Advanced analytics</p>
+            <p class="dyn-text2" data-ar="✓ تدريب الفريق" data-en="✓ Team training">✓ Team training</p>
+            <p class="dyn-text2" data-ar="✓ تقارير تنفيذية" data-en="✓ Executive reporting">✓ Executive reporting</p>
+            <p class="dyn-text2" data-ar="✓ دعم ذو أولوية" data-en="✓ Priority support">✓ Priority support</p>
+          </div>
+          <p class="text-xs dyn-text3 mb-2"><span data-ar="مناسب لـ: " data-en="Ideal for: ">Ideal for: </span></p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/30 bg-gm-400/10 dyn-text2" data-ar="الشركات النامية بسرعة" data-en="Rapidly Growing Companies">Rapidly Growing Companies</span>
+            <span class="text-[10px] font-bold rounded-full px-3 py-1 border border-gm-400/30 bg-gm-400/10 dyn-text2" data-ar="الشركات متعددة الأسواق" data-en="Multi-Market Businesses">Multi-Market Businesses</span>
+          </div>
+          <a href="#" target="_blank" data-wa-plan="Enterprise Growth System" class="btn-gold block text-center w-full py-3 rounded-lg bg-gm-400 text-rp-950 text-sm font-black hover:bg-gm-300 transition-all" data-ar="احجز جلسة استراتيجية →" data-en="Book Strategy Call →">Book Strategy Call →</a>
         </div>
       </div>
       <p class="reveal text-center text-xs dyn-text3 mt-8" data-ar="جميع التعاقدات تشمل تقارير شفافة. الأسعار تعتمد على النطاق — لنتحدث عن أهدافك."
@@ -1272,7 +1361,7 @@
           <p class="text-xs font-black dyn-text2 uppercase tracking-wider mb-4" data-ar="تواصل معنا" data-en="Contact">Contact</p>
           <div class="space-y-2.5">
             <p class="text-sm dyn-text3 flex items-center gap-2"><span class="iconify" data-icon="lucide:map-pin" data-width="14"></span><span data-ar="دبي، الإمارات" data-en="Dubai, UAE">Dubai, UAE</span></p>
-            <a href="tel:+971507044578" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify" data-icon="lucide:phone" data-width="14"></span>+971 50 704 4578</a>
+            <a href="tel:+971507044578" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify" data-icon="lucide:phone" data-width="14"></span><span dir="ltr" style="unicode-bidi:isolate">+971 50 704 4578</span></a>
             <a href="mailto:Info@eiqaathar.com" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify" data-icon="lucide:mail" data-width="14"></span>Info@eiqaathar.com</a>
             <a id="footerWaBtn" href="#" target="_blank" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp" data-width="14"></span><span data-ar="تواصل عبر واتساب" data-en="WhatsApp Us">WhatsApp Us</span></a>
           </div>
@@ -2076,6 +2165,43 @@
     eqEls.close.addEventListener('click', eqClose);
     eqEls.form.addEventListener('submit', (e) => { e.preventDefault(); eqSubmit(eqEls.input.value); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') eqClose(); });
+
+    // ===== SLIDESHOW =====
+    const sliderTrack = document.getElementById('sliderTrack');
+    if (sliderTrack) {
+      const total = sliderTrack.children.length;
+      const dotsBox = document.getElementById('sliderDots');
+      const shell = sliderTrack.closest('.slider-shell');
+      let index = 0, timer = null;
+      const dots = [];
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        d.onclick = () => goToSlide(i);
+        dotsBox.appendChild(d);
+        dots.push(d);
+      }
+      function goToSlide(i) {
+        index = (i + total) % total;
+        sliderTrack.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach((d, j) => d.classList.toggle('active', j === index));
+      }
+      function slideMove(dir) { goToSlide(index + dir); }
+      function startAuto() { stopAuto(); timer = setInterval(() => goToSlide(index + 1), 4500); }
+      function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
+      shell.addEventListener('mouseenter', stopAuto);
+      shell.addEventListener('mouseleave', startAuto);
+      let touchX = null;
+      shell.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      shell.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 40) slideMove(dx < 0 ? 1 : -1);
+        touchX = null;
+      }, { passive: true });
+      startAuto();
+    }
 
     // ===== INIT =====
     updateWaLinks();
