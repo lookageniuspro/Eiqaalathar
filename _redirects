@@ -4,4 +4,6 @@
 # أمثلة جاهزة (فك التعليق عند الحاجة):
 # /ecommerce.html  /services/ecommerce-dropshipping  301
 # /blog.html  /blog  301
-# /index.html  /  301
+
+# توجيه index.html إلى جذر الموقع بحيث يظهر https://www.eiqaathar.com في جوجل
+/index.html  /  301
