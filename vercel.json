@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true }
   ],
@@ -12,7 +14,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.html",
+      "source": "/(ecommerce|blog)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]

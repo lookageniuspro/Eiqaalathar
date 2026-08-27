@@ -9,9 +9,9 @@
   <meta property="og:title" content="Marketing Blog — Insights &amp; Strategy | EIQAA Al Athar">
   <meta property="og:description" content="Practical marketing guides, SEO tips, Dubai business insights and case studies — turning marketing knowledge into measurable results.">
   <meta property="og:image" content="https://www.eiqaathar.com/logo.jpeg">
-  <meta property="og:url" content="https://www.eiqaathar.com/blog.html">
+  <meta property="og:url" content="https://www.eiqaathar.com/blog">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.eiqaathar.com/blog.html">
+  <link rel="canonical" href="https://www.eiqaathar.com/blog">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -21,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "EIQAA Al Athar Marketing Blog",
-    "url": "https://eiqaathar.com/blog.html",
+    "url": "https://eiqaathar.com/blog",
     "publisher": {
       "@type": "Organization",
       "name": "EIQAA Al Athar Marketing Management",
@@ -60,7 +60,7 @@
       "name": "EIQAA Al Athar",
       "logo": { "@type": "ImageObject", "url": "https://www.eiqaathar.com/logo.jpeg" }
     },
-    "mainEntityOfPage": "https://www.eiqaathar.com/blog.html#featured",
+    "mainEntityOfPage": "https://www.eiqaathar.com/blog#featured",
     "inLanguage": ["en", "ar"]
   }
   </script>
@@ -82,126 +82,7 @@
       }
     }
   </script>
-  <style>
-    :root {
-      --bg-primary: #0D0018; --bg-secondary: #16002A; --bg-card: rgba(255,255,255,0.03); --bg-card-hover: rgba(139,92,246,0.08);
-      --border: rgba(255,255,255,0.07); --border-hover: rgba(139,92,246,0.35);
-      --text-primary: #FFFFFF; --text-secondary: #C4B5FD; --text-muted: #8B8B9E;
-      --nav-bg: rgba(13,0,24,0.85); --nav-border: rgba(139,92,246,0.15);
-    }
-    .light-mode {
-      --bg-primary: #F8F7FB; --bg-secondary: #EDE5FF; --bg-card: rgba(91,33,182,0.04); --bg-card-hover: rgba(139,92,246,0.08);
-      --border: rgba(91,33,182,0.1); --border-hover: rgba(139,92,246,0.3);
-      --text-primary: #1A1A1A; --text-secondary: #5B21B6; --text-muted: #9CA3AF;
-      --nav-bg: rgba(248,247,251,0.85); --nav-border: rgba(91,33,182,0.1);
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); overflow-x: hidden; transition: background 0.4s, color 0.4s; }
-    body.font-cairo { font-family: 'Cairo', sans-serif; }
-    ::selection { background: #8B5CF6; color: #fff; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
-    ::-webkit-scrollbar-thumb { background: #4C1D95; border-radius: 3px; }
-
-    .dyn-bg { background: var(--bg-primary); }
-    .dyn-bg2 { background: var(--bg-secondary); }
-    .dyn-card {
-      position: relative; overflow: hidden;
-      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.10);
-      transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), border-color 0.4s, box-shadow 0.4s, background 0.4s;
-    }
-    .dyn-card::before { content:''; position:absolute; top:0; left:-160%; width:60%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent); transform: skewX(-20deg); pointer-events:none; transition: left 0.9s ease; z-index:1; }
-    .dyn-card:hover::before { left: 160%; }
-    .dyn-card::after { content:''; position:absolute; top:0; left:12%; right:12%; height:1px; background: linear-gradient(90deg, transparent, rgba(139,92,246,0.6), rgba(245,183,0,0.5), transparent); opacity:0; transition: opacity 0.4s; pointer-events:none; }
-    .dyn-card:hover { transform: translateY(-6px); border-color: rgba(245,183,0,0.45); background: linear-gradient(135deg, rgba(139,92,246,0.16), rgba(255,255,255,0.03)); box-shadow: 0 16px 44px rgba(0,0,0,0.35), 0 0 26px rgba(139,92,246,0.28), 0 0 50px rgba(245,183,0,0.12); }
-    .dyn-card:hover::after { opacity: 1; }
-    .dyn-card.glass-no-lift:hover { transform: scale(var(--tw-scale-x), var(--tw-scale-y)); background: var(--bg-card-hover); border-color: var(--border-hover); box-shadow: 0 4px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.10); }
-    .dyn-card.glass-no-lift::before, .dyn-card.glass-no-lift::after { display: none; }
-    .light-mode .dyn-card { background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(248,247,251,0.65)); border-color: rgba(91,33,182,0.12); box-shadow: 0 8px 28px rgba(91,33,182,0.10), inset 0 1px 0 rgba(255,255,255,0.9); }
-    .light-mode .dyn-card::before { background: linear-gradient(90deg, transparent, rgba(139,92,246,0.15), transparent); }
-    .light-mode .dyn-card:hover { background: linear-gradient(135deg, #FFFFFF, #F0EBFF); border-color: rgba(245,183,0,0.55); box-shadow: 0 14px 36px rgba(91,33,182,0.16), 0 0 24px rgba(139,92,246,0.22), 0 0 44px rgba(245,183,0,0.12); }
-    .light-mode .dyn-card.glass-no-lift:hover { background: var(--bg-card-hover); }
-
-    .dyn-text { color: var(--text-primary); }
-    .dyn-text2 { color: var(--text-secondary); }
-    .dyn-text3 { color: var(--text-muted); }
-    .dyn-nav { background: var(--nav-bg); border-bottom: 1px solid var(--nav-border); }
-
-    .brand-gradient { background: linear-gradient(135deg, #3B0A5E 0%, #5B21B6 100%); }
-    .gradient-text { background: linear-gradient(135deg, #8B5CF6, #5B21B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .gradient-text-gold { background: linear-gradient(135deg, #F5B700, #FFD166); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .light-mode .gradient-text { background: linear-gradient(135deg, #5B21B6, #8B5CF6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .light-mode .gradient-text-gold { background: linear-gradient(135deg, #F5B700, #B87D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-    .btn-gold { position: relative; overflow: hidden; }
-    .btn-gold::after { content:''; position:absolute; top:0; left:-100%; width:100%; height:100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.5s; }
-    .btn-gold:hover::after { left: 100%; }
-
-    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.4,0,0.2,1); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-
-    .progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: linear-gradient(90deg, #F5B700, #FFD166); z-index: 200; transition: width 0.1s linear; }
-    .wa-pulse { animation: waPulse 2s ease-in-out infinite; }
-    @keyframes waPulse { 0%{ box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70%{ box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100%{ box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
-
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-item.open .faq-answer { max-height: 600px; }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-icon { transition: transform 0.3s; }
-
-    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); }
-    [dir="rtl"] .mobile-menu { transform: translateX(-100%); }
-    .mobile-menu.open { transform: translateX(0); }
-
-    .lang-btn { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; transition: all 0.2s; cursor: pointer; }
-    .lang-btn.active { background: rgba(139,92,246,0.25); color: #F5B700; }
-    :not(.dark) .lang-btn.active { background: #5B21B6; color: #FFFFFF; }
-    .lang-btn:not(.active) { color: #8B8B9E; }
-    :not(.dark) .lang-btn:not(.active) { color: #9CA3AF; }
-
-    .theme-toggle { width: 52px; height: 28px; border-radius: 14px; position: relative; cursor: pointer; transition: background 0.3s; }
-    .theme-toggle .toggle-circle { width: 22px; height: 22px; border-radius: 50%; position: absolute; top: 3px; transition: all 0.3s; }
-    .dark .theme-toggle { background: #4C1D95; }
-    .dark .theme-toggle .toggle-circle { left: 27px; background: #F5B700; }
-    :not(.dark) .theme-toggle { background: #8B5CF6; }
-    :not(.dark) .theme-toggle .toggle-circle { left: 3px; background: #F8F7FB; }
-    [dir="rtl"] .dark .theme-toggle .toggle-circle { left: 3px; }
-    [dir="rtl"] :not(.dark) .theme-toggle .toggle-circle { left: 27px; }
-
-    .article-prose p { font-size: 15px; line-height: 1.95; margin-bottom: 1.1rem; color: var(--text-secondary); }
-    .light-mode .article-prose p { color: #4B4B66; }
-    .article-prose ul { list-style: none; margin-bottom: 1.2rem; }
-    .article-prose ul li { position: relative; padding-inline-start: 1.4rem; font-size: 15px; line-height: 1.85; color: var(--text-secondary); margin-bottom: 0.5rem; }
-    .light-mode .article-prose ul li { color: #4B4B66; }
-    .article-prose ul li::before { content:''; position: absolute; top: 0.6em; inset-inline-start: 0; width: 9px; height: 9px; border-radius: 2px; background: linear-gradient(135deg, #8B5CF6, #F5B700); }
-    .callout-box { border-inline-start: 3px solid #F5B700; background: linear-gradient(135deg, rgba(139,92,246,0.14), rgba(245,183,0,0.06)); border-radius: 12px; padding: 1.1rem 1.2rem; margin: 1.4rem 0; }
-    .step-chip { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 30px; border-radius: 9px; font-weight: 900; font-size: 13px; background: linear-gradient(135deg, #8B5CF6, #6D28D9); color: #fff; margin-inline-end: 0.75rem; box-shadow: 0 4px 14px rgba(139,92,246,0.35); }
-    .coming-soon { position: absolute; top: 12px; inset-inline-end: 12px; z-index: 2; }
-
-    /* ===== SLIDESHOW ===== */
-    .slider-shell { position: relative; overflow: hidden; border-radius: 1.25rem; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 60px rgba(0,0,0,0.45), 0 0 44px rgba(139,92,246,0.18); background: #0D0018; }
-    .slider-shell.shell-mobile { width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 1/1; }
-    .slider-shell.shell-desktop { display: none; }
-    .slider-track { display: flex; transition: transform 0.7s cubic-bezier(0.4,0,0.2,1); height: 100%; }
-    .slider-slide { min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
-    .slider-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 20; width: 44px; height: 44px; border-radius: 50%; background: rgba(13,0,24,0.55); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.2); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; opacity: 0; }
-    .slider-shell:hover .slider-btn { opacity: 1; }
-    .slider-btn:hover { background: #F5B700; color: #1A1A1A; border-color: #F5B700; transform: translateY(-50%) scale(1.08); }
-    .slider-btn.prev { left: 14px; }
-    .slider-btn.next { right: 14px; }
-    .slider-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 20; }
-    .slider-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.5); border: none; cursor: pointer; transition: all 0.3s; padding: 0; }
-    .slider-dot.active { background: #F5B700; width: 26px; border-radius: 6px; }
-    .light-mode .slider-btn { background: rgba(91,33,182,0.5); }
-    .light-mode .slider-dot { background: rgba(91,33,182,0.4); }
-    @media (max-width: 768px) { .slider-btn { width: 36px; height: 36px; opacity: 1; } .slider-dot { width: 8px; height: 8px; } .slider-dot.active { width: 20px; } }
-    @media (min-width: 769px) { #slideshow { overflow-x: hidden; } .slider-shell.shell-mobile { display: none; } .slider-shell.shell-desktop { display: block; max-width: none; width: 100vw; margin-left: calc(50% - 50vw); aspect-ratio: 16/9; } .slider-slide img { width: 100%; height: 100%; object-fit: cover; } }
-  </style>
+  <link rel="stylesheet" href="assets/blog-styles.css">
 </head>
 <body class="dark font-inter">
 
@@ -210,7 +91,7 @@
   <!-- ========== NAVBAR ========== -->
   <nav id="navbar" class="sticky top-0 z-[100] h-16 flex items-center transition-all duration-300 dyn-nav">
     <div class="max-w-7xl mx-auto w-full px-5 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+      <a href="/" class="flex items-center gap-2.5 group shrink-0">
         <img src="logo.jpeg" alt="EIQAA Al Athar Logo" class="w-10 h-10 rounded-lg object-cover ring-2 ring-rp-400/40 group-hover:ring-gm-400/60 transition-all">
         <span class="dyn-text font-extrabold text-lg tracking-tight whitespace-nowrap">
           EIQAA <span class="gradient-text-gold">AL ATHAR</span>
@@ -218,9 +99,9 @@
         </span>
       </a>
       <div class="hidden lg:flex items-center gap-4 whitespace-nowrap">
-        <a href="index.html" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="الرئيسية" data-en="Home">Home</a>
-        <a href="index.html#services" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="خدماتنا" data-en="Services">Services</a>
-        <a href="blog.html" class="text-[13px] text-gm-400 font-semibold" data-ar="المدونة" data-en="Blog">Blog</a>
+        <a href="/" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="الرئيسية" data-en="Home">Home</a>
+        <a href="/#services" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="خدماتنا" data-en="Services">Services</a>
+        <a href="blog" class="text-[13px] text-gm-400 font-semibold" data-ar="المدونة" data-en="Blog">Blog</a>
         <a href="#categories" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="الفئات" data-en="Categories">Categories</a>
         <a href="#faq" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="الأسئلة الشائعة" data-en="FAQ">FAQ</a>
         <div class="flex items-center gap-0.5 dyn-card glass-no-lift rounded-lg p-0.5">
@@ -255,9 +136,9 @@
   <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[99] flex flex-col items-center justify-center gap-6 dark:bg-rp-950/98 bg-white/98 backdrop-blur-xl">
     <img src="logo.jpeg" alt="EIQAA Logo" class="w-16 h-16 rounded-2xl object-cover mb-2 ring-2 ring-gm-400/50">
     <button onclick="toggleMenu()" class="absolute top-5 left-5 dyn-text p-2"><span class="iconify" data-icon="lucide:x" data-width="28"></span></button>
-    <a href="index.html" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="الرئيسية" data-en="Home">Home</a>
-    <a href="index.html#services" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="خدماتنا" data-en="Services">Services</a>
-    <a href="blog.html" onclick="toggleMenu()" class="text-xl text-gm-400 font-semibold" data-ar="المدونة" data-en="Blog">Blog</a>
+    <a href="/" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="الرئيسية" data-en="Home">Home</a>
+    <a href="/#services" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="خدماتنا" data-en="Services">Services</a>
+    <a href="blog" onclick="toggleMenu()" class="text-xl text-gm-400 font-semibold" data-ar="المدونة" data-en="Blog">Blog</a>
     <a href="#categories" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="الفئات" data-en="Categories">Categories</a>
     <a href="#faq" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="الأسئلة الشائعة" data-en="FAQ">FAQ</a>
     <a id="mobileWaBtn" href="#" target="_blank" onclick="toggleMenu()" class="btn-gold bg-gradient-to-l from-gm-600 to-gm-400 text-rp-950 font-bold text-lg px-8 py-3 rounded-xl mt-2" data-ar="📅 احجز جلسة استراتيجية" data-en="📅 Book a Strategy Call">📅 Book a Strategy Call</a>
@@ -420,7 +301,7 @@
           <div class="space-y-2">
             <a href="#categories" class="block text-sm dyn-text2 hover:text-gm-400 transition-colors" data-ar="دليلك الشامل لتحسين محركات البحث في 2026 (قريباً)" data-en="Your Complete SEO Guide For 2026 (Coming Soon)">Your Complete SEO Guide For 2026 (Coming Soon)</a>
             <a href="#latest" class="block text-sm dyn-text2 hover:text-gm-400 transition-colors" data-ar="7 قنوات تسويق رقمي يجب أن يعتمدها كل مشروع في دبي (قريباً)" data-en="7 Digital Marketing Channels Every Dubai Business Should Use (Coming Soon)">7 Digital Marketing Channels Every Dubai Business Should Use (Coming Soon)</a>
-            <a href="index.html#stories" class="block text-sm dyn-text2 hover:text-gm-400 transition-colors" data-ar="دراسات الحالة: أتمتة واتساب وكيف وفرت ساعات يومياً" data-en="Case Study: WhatsApp Automation That Saved Hours Every Day">Case Study: WhatsApp Automation That Saved Hours Every Day</a>
+            <a href="/#stories" class="block text-sm dyn-text2 hover:text-gm-400 transition-colors" data-ar="دراسات الحالة: أتمتة واتساب وكيف وفرت ساعات يومياً" data-en="Case Study: WhatsApp Automation That Saved Hours Every Day">Case Study: WhatsApp Automation That Saved Hours Every Day</a>
           </div>
         </div>
       </article>
@@ -674,10 +555,10 @@
         <div>
           <p class="text-xs font-black dyn-text2 uppercase tracking-wider mb-4" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</p>
           <div class="space-y-2.5">
-            <a href="index.html" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="الرئيسية" data-en="Home">Home</a>
-            <a href="blog.html" class="block text-sm text-gm-400 transition-colors" data-ar="المدونة" data-en="Blog">Blog</a>
-            <a href="ecommerce.html" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="التجارة والدروب شيبينغ" data-en="E-commerce &amp; Dropshipping">E-commerce &amp; Dropshipping</a>
-            <a href="index.html#stories" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="دراسات الحالة" data-en="Case Studies">Case Studies</a>
+            <a href="/" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="الرئيسية" data-en="Home">Home</a>
+            <a href="blog" class="block text-sm text-gm-400 transition-colors" data-ar="المدونة" data-en="Blog">Blog</a>
+            <a href="ecommerce" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="التجارة والدروب شيبينغ" data-en="E-commerce &amp; Dropshipping">E-commerce &amp; Dropshipping</a>
+            <a href="/#stories" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="دراسات الحالة" data-en="Case Studies">Case Studies</a>
             <a href="#newsletter" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="النشرة البريدية" data-en="Newsletter">Newsletter</a>
           </div>
         </div>
@@ -704,149 +585,6 @@
     </a>
   </div>
 
-  <script>
-    // ===== DATA =====
-    const WA_NUMBER = '971507044578';
-    let currentLang = 'en';
-
-    const waMessages = {
-      en: {
-        default: 'Hello EIQAA Al Athar 👋, I visited your blog and I would like to book a free strategy consultation.'
-      },
-      ar: {
-        default: 'مرحباً إيقاع الأثر 👋، اطلعت على مدونتكم وأرغب في حجز استشارة مجانية.'
-      }
-    };
-
-    function waLink(text) {
-      return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
-    }
-
-    // ===== WA LINKS =====
-    function updateWaLinks() {
-      ['heroWaBtn','navWaBtn','mobileWaBtn','waFloatBtn','finalWaBtn','footerWaBtn','articleWaBtn','topicWaBtn'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.href = waLink(waMessages[currentLang].default);
-      });
-    }
-
-    // ===== LANGUAGE =====
-    function setLang(lang) {
-      currentLang = lang;
-      const isAr = lang === 'ar';
-      document.documentElement.lang = lang;
-      document.documentElement.dir = isAr ? 'rtl' : 'ltr';
-      document.body.classList.toggle('font-cairo', isAr);
-      document.body.classList.toggle('font-inter', !isAr);
-      document.querySelectorAll('[data-ar][data-en]').forEach(el => {
-        el.textContent = isAr ? el.dataset.ar : el.dataset.en;
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', (btn.textContent.trim() === 'AR' && isAr) || (btn.textContent.trim() === 'EN' && !isAr));
-      });
-      updateWaLinks();
-    }
-    setLang('en');
-
-    // ===== THEME =====
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-      document.body.classList.toggle('light-mode', !document.body.classList.contains('dark'));
-    }
-
-    // ===== MOBILE MENU =====
-    function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-
-    // ===== NEWSLETTER =====
-    function newsletterSubmit(e) {
-      e.preventDefault();
-      const msg = document.getElementById('newsletterMsg');
-      msg.classList.remove('hidden');
-      e.target.querySelector('input').value = '';
-      setTimeout(() => msg.classList.add('hidden'), 5000);
-    }
-
-    // ===== SCROLL PROGRESS =====
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement;
-      const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
-      document.getElementById('progressBar').style.width = pct + '%';
-    });
-
-    // ===== REVEAL =====
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // ===== FAQ =====
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
-    }
-
-    // ===== SMOOTH SCROLL =====
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        if (this.getAttribute('target') === '_blank') return;
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) {
-          e.preventDefault();
-          t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // ===== SLIDESHOW =====
-    document.querySelectorAll('.slider-shell').forEach((shell) => {
-      const track = shell.querySelector('.slider-track');
-      if (!track) return;
-      const total = track.children.length;
-      const dotsBox = shell.querySelector('.slider-dots');
-      let index = 0, timer = null;
-      const dots = [];
-      for (let i = 0; i < total; i++) {
-        const d = document.createElement('button');
-        d.className = 'slider-dot' + (i === 0 ? ' active' : '');
-        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        d.onclick = () => goToSlide(i);
-        dotsBox.appendChild(d);
-        dots.push(d);
-      }
-      function goToSlide(i) {
-        index = (i + total) % total;
-        track.style.transform = 'translateX(-' + (index * 100) + '%)';
-        dots.forEach((d, j) => d.classList.toggle('active', j === index));
-      }
-      function slideMove(dir) { goToSlide(index + dir); }
-      const btnPrev = shell.querySelector('.slider-btn.prev');
-      const btnNext = shell.querySelector('.slider-btn.next');
-      if (btnPrev) btnPrev.addEventListener('click', () => slideMove(-1));
-      if (btnNext) btnNext.addEventListener('click', () => slideMove(1));
-      function startAuto() { stopAuto(); timer = setInterval(() => goToSlide(index + 1), 4500); }
-      function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
-      shell.addEventListener('mouseenter', stopAuto);
-      shell.addEventListener('mouseleave', startAuto);
-      let touchX = null;
-      shell.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-      shell.addEventListener('touchend', e => {
-        if (touchX === null) return;
-        const dx = e.changedTouches[0].clientX - touchX;
-        if (Math.abs(dx) > 40) slideMove(dx < 0 ? 1 : -1);
-        touchX = null;
-      }, { passive: true });
-      startAuto();
-    });
-
-    // ===== INIT =====
-    updateWaLinks();
-  </script>
+  <script src="assets/blog-script.js"></script>
 </body>
 </html>
