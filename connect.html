@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0D0018">
+  <title>Let's Stay Connected | EIQAA Al Athar</title>
+  <meta name="description" content="Let's stay connected — follow EIQAA Al Athar on social media. Scan the QR code or tap a platform to connect with us directly.">
+  <meta property="og:title" content="Let's Stay Connected | EIQAA Al Athar">
+  <meta property="og:description" content="Scan the QR code or tap a platform to connect with EIQAA Al Athar directly.">
+  <meta property="og:image" content="https://www.eiqaathar.com/logo.jpeg">
+  <meta property="og:url" content="https://www.eiqaathar.com/connect">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Let's Stay Connected | EIQAA Al Athar">
+  <meta name="twitter:description" content="Scan the QR code or tap a platform to connect with us directly.">
+  <meta name="twitter:image" content="https://www.eiqaathar.com/logo.jpeg">
+  <link rel="canonical" href="https://www.eiqaathar.com/connect">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {
+        fontFamily: { inter: ['Inter','sans-serif'], cairo: ['Cairo','sans-serif'] },
+        colors: {
+          rp: { 50:'#F8F7FB', 100:'#F3EEFF', 200:'#E9DDFF', 300:'#D8C4FF', 400:'#BE9FFF', 500:'#A78BFA', 600:'#8B5CF6', 700:'#7C3AED', 800:'#5B21B6', 900:'#4C1D95', 950:'#2E1065' },
+          gm: { 300:'#FFD166', 400:'#F5B700', 500:'#E5A800', 600:'#D49500', 700:'#B87D00', 800:'#8A5F00' }
+        }
+      }}
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link rel="stylesheet" href="assets/connect-styles.css">
+</head>
+<body class="dark font-inter">
+  <!-- ===== BACKGROUND DECOR ===== -->
+  <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="connect-orb connect-orb-a"></div>
+    <div class="connect-orb connect-orb-b"></div>
+    <div class="connect-orb connect-orb-c"></div>
+    <div class="connect-grid"></div>
+  </div>
+
+  <!-- ===== TOP CONTROLS ===== -->
+  <div class="connect-topbar">
+    <button id="langEnBtn" class="lang-btn" onclick="setLang('en')">EN</button>
+    <button id="langArBtn" class="lang-btn" onclick="setLang('ar')">AR</button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="toggle-circle"></span>
+    </button>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <main class="min-h-screen flex items-center justify-center px-4 sm:px-6 py-14 md:py-16">
+    <section class="w-full max-w-[420px] sm:max-w-[460px]">
+
+      <!-- CARD -->
+      <div class="connect-card reveal">
+        <span class="connect-card-glow"></span>
+
+        <!-- LOGO + BRAND -->
+        <div class="flex flex-col items-center text-center pt-10 px-6 sm:px-10">
+          <div class="logo-wrap reveal d1">
+            <img src="logo.jpeg" alt="EIQAA Al Athar Logo" class="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-full ring-4 ring-gm-400/60 shadow-2xl shadow-gm-500/30">
+          </div>
+          <p class="mt-4 text-[11px] sm:text-xs font-black tracking-[0.35em] uppercase dyn-text2 reveal d2">EIQAA <span class="gradient-text-gold">AL ATHAR</span></p>
+          <p class="mt-1 text-[10px] sm:text-[11px] font-semibold tracking-widest dyn-text3 uppercase reveal d2" dir="ltr">إيقاع الأثر</p>
+        </div>
+
+        <!-- HEADING -->
+        <div class="px-6 sm:px-10 mt-6 text-center reveal d3">
+          <h1 class="text-[26px] sm:text-3xl font-black leading-tight dyn-text tracking-tight" data-ar="خلّينا نبقى <span class='gradient-text-gold'>متصلين</span>" data-en="Let's Stay <span class='gradient-text-gold'>Connected</span>">Let's Stay <span class="gradient-text-gold">Connected</span></h1>
+          <p class="mt-2.5 text-xs sm:text-[13px] dyn-text3 leading-relaxed max-w-xs mx-auto" data-ar="امسح الباركود بالأعلى أو اضغط على أي منصة لتفتح قنواتنا مباشرة وتتابع كل جديد."
+            data-en="Scan the QR code above or tap any platform to open our channels instantly and never miss an update.">Scan the QR code above or tap any platform to open our channels instantly and never miss an update.</p>
+        </div>
+
+        <!-- QR CODE -->
+        <div class="px-6 sm:px-10 mt-7 reveal d4">
+          <div class="qr-card">
+            <div class="qr-box" id="qrBox">
+              <div id="qrcode" class="flex items-center justify-center"></div>
+              <span class="scan-line"></span>
+            </div>
+          </div>
+          <p class="mt-3 flex items-center justify-center gap-1.5 text-[11px] sm:text-xs dyn-text3 font-semibold">
+            <span class="iconify text-gm-500" data-icon="lucide:scan-line" data-width="15"></span>
+            <span data-ar="امسح الباركود وافتح صفحتنا مباشرة" data-en="Scan to open this page directly">Scan to open this page directly</span>
+          </p>
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="px-6 sm:px-10 mt-7 reveal d5">
+          <p class="text-[10px] font-black uppercase tracking-[0.25em] dyn-text3 text-center mb-3.5" data-ar="تابعنا على" data-en="Follow Us On">Follow Us On</p>
+          <div class="grid grid-cols-4 gap-3 sm:gap-3.5">
+            <a href="https://www.facebook.com/share/1EeivBtWdc/" target="_blank" rel="noopener" class="social-btn social-fb" aria-label="Facebook">
+              <span class="iconify" data-icon="mdi:facebook" data-width="26"></span>
+              <span class="social-label" data-ar="فيسبوك" data-en="Facebook">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/eiqaa_marketing?igsh=YndzeW42NWFvY2p4" target="_blank" rel="noopener" class="social-btn social-ig" aria-label="Instagram">
+              <span class="iconify" data-icon="mdi:instagram" data-width="26"></span>
+              <span class="social-label" data-ar="انستغرام" data-en="Instagram">Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@eiqaamarketing?_r=1&amp;_t=ZS-98T8NvILn50" target="_blank" rel="noopener" class="social-btn social-tk" aria-label="TikTok">
+              <span class="iconify" data-icon="simple-icons:tiktok" data-width="24"></span>
+              <span class="social-label" data-ar="تيك توك" data-en="TikTok">TikTok</span>
+            </a>
+            <a href="https://www.linkedin.com/company/eiqaa-al-athar-marketing-management/" target="_blank" rel="noopener" class="social-btn social-in" aria-label="LinkedIn">
+              <span class="iconify" data-icon="mdi:linkedin" data-width="26"></span>
+              <span class="social-label" data-ar="لينكد إن" data-en="LinkedIn">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="px-6 sm:px-10 mt-6 pb-8 reveal d6">
+          <div class="border-t pt-5 grid grid-cols-1 gap-2" style="border-color:var(--border);">
+            <a id="waBtn" href="https://wa.me/971507044578?text=Hello%20EIQAA%20Al%20Athar%20%F0%9F%91%8B%2C%20I%20scanned%20your%20QR%20code%20and%20I%20would%20like%20to%20connect." target="_blank" rel="noopener" class="contact-btn">
+              <span class="iconify text-[#25D366]" data-icon="mdi:whatsapp" data-width="18"></span>
+              <span class="flex-1 text-start" data-ar="تواصل عبر واتساب" data-en="Chat on WhatsApp">Chat on WhatsApp</span>
+              <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="15"></span>
+            </a>
+            <a href="mailto:Info@eiqaathar.com" class="contact-btn">
+              <span class="iconify text-rp-500" data-icon="lucide:mail" data-width="18"></span>
+              <span class="flex-1 text-start" dir="ltr" style="unicode-bidi:isolate">Info@eiqaathar.com</span>
+              <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="15"></span>
+            </a>
+            <a href="tel:+971507044578" class="contact-btn">
+              <span class="iconify text-rp-400" data-icon="lucide:phone" data-width="18"></span>
+              <span class="flex-1 text-start" dir="ltr" style="unicode-bidi:isolate">+971 50 704 4578</span>
+              <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="15"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACK TO SITE -->
+      <p class="text-center mt-6 reveal d7">
+        <a href="." class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold dyn-text3 hover:text-gm-400 transition-colors">
+          <span class="iconify" data-icon="lucide:globe" data-width="13"></span>
+          <span data-ar="العودة إلى موقعنا" data-en="Back to eiqaathar.com">Back to eiqaathar.com</span>
+        </a>
+      </p>
+
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="assets/connect-script.js"></script>
+</body>
+</html>
