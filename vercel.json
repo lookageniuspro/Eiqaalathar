@@ -14,7 +14,7 @@
       ]
     },
     {
-      "source": "/(ecommerce|blog|connect)",
+      "source": "/(ecommerce|blog|connect|contact)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
