@@ -3,374 +3,231 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="google-site-verification" content="yFAMSpvq0kLUauheP85uf8KPfWgqFUzWQT5ZF8vmdQw">
   <meta name="theme-color" content="#0D0018">
-  <title>Contact Us | EIQAA Al Athar — Marketing Agency in Dubai</title>
-  <meta name="description" content="Contact EIQAA Al Athar — Dubai-based growth marketing agency. Call +971 50 704 4578, WhatsApp us, or send a message and we'll reply within 2 hours.">
+  <title>Contact Us | EIQAA Al Athar</title>
+  <meta name="description" content="Contact EIQAA Al Athar — Dubai growth marketing agency. WhatsApp, call, or send a message and we reply within 2 hours.">
   <meta property="og:title" content="Contact Us | EIQAA Al Athar">
-  <meta property="og:description" content="Let's talk growth. Send us a message, call or WhatsApp — we reply within 2 hours.">
+  <meta property="og:description" content="Let's talk growth — WhatsApp, call, or message us. We reply within 2 hours.">
   <meta property="og:image" content="https://www.eiqaathar.com/logo.jpeg">
   <meta property="og:url" content="https://www.eiqaathar.com/contact">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Us | EIQAA Al Athar">
-  <meta name="twitter:description" content="Let's talk growth. Send us a message, call or WhatsApp — we reply within 2 hours.">
+  <meta name="twitter:description" content="Let's talk growth — WhatsApp, call, or message us. We reply within 2 hours.">
   <meta name="twitter:image" content="https://www.eiqaathar.com/logo.jpeg">
   <link rel="canonical" href="https://www.eiqaathar.com/contact">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact EIQAA Al Athar",
-    "url": "https://www.eiqaathar.com/contact",
-    "description": "Contact the EIQAA Al Athar marketing team in Dubai.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "EIQAA Al Athar Marketing Management",
-      "url": "https://www.eiqaathar.com/",
-      "logo": "https://www.eiqaathar.com/logo.jpeg",
-      "telephone": "+971507044578",
-      "email": "Info@eiqaathar.com",
-      "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" }
-    }
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { inter: ['Inter','sans-serif'], cairo: ['Cairo','sans-serif'] },
-          colors: {
-            rp: { 50:'#F8F7FB',100:'#EDE5FF',200:'#D9C8FF',300:'#BE9FFF',400:'#8B5CF6',500:'#7C3AED',600:'#6D28D9',700:'#5B21B6',800:'#4C1D95',900:'#3B0A5E',950:'#1A1A1A' },
-            gm: { 300:'#FFD166',400:'#F5B700',500:'#E5A800',600:'#D49500',700:'#B87D00',800:'#8A5F00' }
-          }
+      theme: { extend: {
+        fontFamily: { inter: ['Inter','sans-serif'], cairo: ['Cairo','sans-serif'] },
+        colors: {
+          rp: { 50:'#F8F7FB', 100:'#F3EEFF', 200:'#E9DDFF', 300:'#D8C4FF', 400:'#BE9FFF', 500:'#A78BFA', 600:'#8B5CF6', 700:'#7C3AED', 800:'#5B21B6', 900:'#4C1D95', 950:'#2E1065' },
+          gm: { 300:'#FFD166', 400:'#F5B700', 500:'#E5A800', 600:'#D49500', 700:'#B87D00', 800:'#8A5F00' }
         }
-      }
-    }
+      }}
+    };
   </script>
-  <link rel="stylesheet" href="assets/contact-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link rel="stylesheet" href="assets/connect-styles.css">
+  <style>
+    .form-field label { display:block; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-secondary); margin-bottom:6px; }
+    .form-field input, .form-field select, .form-field textarea {
+      width:100%; border-radius:12px; padding:13px 15px; font-size:14px; font-family:inherit;
+      background:rgba(255,255,255,0.045); border:1px solid rgba(255,255,255,0.11);
+      color:var(--text-primary); outline:none; transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .light-mode .form-field input, .light-mode .form-field select, .light-mode .form-field textarea {
+      background:rgba(91,33,182,0.04); border-color:rgba(91,33,182,0.14);
+    }
+    .form-field input::placeholder, .form-field textarea::placeholder { color:var(--text-muted); opacity:0.7; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+      border-color:rgba(139,92,246,0.6); box-shadow:0 0 0 3px rgba(139,92,246,0.15), 0 0 18px rgba(139,92,246,0.1);
+    }
+    .light-mode .form-field input:focus, .light-mode .form-field select:focus, .light-mode .form-field textarea:focus {
+      border-color:#F5B700; background:#FFFFFF;
+    }
+    .form-field select { appearance:none; -webkit-appearance:none; cursor:pointer; background-image: linear-gradient(45deg, transparent 50%, var(--text-muted) 50%), linear-gradient(135deg, var(--text-muted) 50%, transparent 50%); background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px); background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+    [dir="rtl"] .form-field select { background-position: calc(0% + 18px) calc(1em + 2px), calc(0% + 13px) calc(1em + 2px); }
+    .form-field select option { background: var(--bg-primary); color: var(--text-primary); }
+    .form-field textarea { resize:none; line-height:1.7; }
+    @media (max-width:640px) { .form-field input, .form-field select, .form-field textarea { padding:12px 14px; font-size:16px; } }
+  </style>
 </head>
 <body class="dark font-inter">
-
-  <div class="progress-bar" id="progressBar"></div>
-
-  <!-- ========== NAVBAR ========== -->
-  <nav id="navbar" class="sticky top-0 z-[100] h-16 flex items-center transition-all duration-300 dyn-nav">
-    <div class="max-w-7xl mx-auto w-full px-5 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2.5 group shrink-0">
-        <img src="logo.jpeg" alt="EIQAA Al Athar Logo" class="w-10 h-10 rounded-lg object-cover ring-2 ring-rp-400/40 group-hover:ring-gm-400/60 transition-all">
-        <span class="dyn-text font-extrabold text-lg tracking-tight whitespace-nowrap">
-          EIQAA <span class="gradient-text-gold">AL ATHAR</span>
-          <span class="hidden md:block text-[9px] font-medium text-gm-400 uppercase tracking-[0.2em] -mt-0.5" data-ar="إدارة التسويق" data-en="Marketing Management">Marketing Management</span>
-        </span>
-      </a>
-      <div class="hidden lg:flex items-center gap-4 whitespace-nowrap">
-        <a href="/" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="الرئيسية" data-en="Home">Home</a>
-        <a href="/#services" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="خدماتنا" data-en="Services">Services</a>
-        <a href="/#about" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="من نحن" data-en="About">About</a>
-        <a href="blog" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="المدونة" data-en="Blog">Blog</a>
-        <a href="ecommerce" class="text-[13px] dyn-text2 hover:text-gm-400 transition-colors font-medium" data-ar="التجارة الإلكترونية" data-en="E-commerce">E-commerce</a>
-        <a href="contact" class="text-[13px] text-gm-400 font-semibold" data-ar="اتصل بنا" data-en="Contact">Contact</a>
-        <div class="flex items-center gap-0.5 dyn-card glass-no-lift rounded-lg p-0.5">
-          <span class="lang-btn active" onclick="setLang('ar')">AR</span>
-          <span class="lang-btn" onclick="setLang('en')">EN</span>
-        </div>
-        <div class="theme-toggle" onclick="toggleTheme()">
-          <div class="toggle-circle flex items-center justify-center">
-            <span class="dark:hidden iconify" data-icon="lucide:sun" data-width="12" style="color:#7C3AED;"></span>
-            <span class="hidden dark:inline iconify" data-icon="lucide:moon" data-width="12" style="color:#4C1D95;"></span>
-          </div>
-        </div>
-        <a id="navWaBtn" href="#" target="_blank" class="btn-gold bg-gradient-to-l from-gm-600 to-gm-400 text-rp-950 font-bold text-xs px-5 py-2.5 rounded-lg hover:from-gm-500 hover:to-gm-300 transition-all" data-ar="📅 احجز جلسة استراتيجية" data-en="📅 Book a Strategy Call">📅 Book a Strategy Call</a>
-      </div>
-      <div class="flex lg:hidden items-center gap-3">
-        <div class="flex items-center gap-0.5 dyn-card border rounded-lg p-0.5">
-          <span class="lang-btn active" onclick="setLang('ar')">AR</span>
-          <span class="lang-btn" onclick="setLang('en')">EN</span>
-        </div>
-        <div class="theme-toggle" onclick="toggleTheme()" style="width:44px;height:24px;">
-          <div class="toggle-circle" style="width:18px;height:18px;top:3px;">
-            <span class="dark:hidden iconify" data-icon="lucide:sun" data-width="10" style="color:#7C3AED;"></span>
-            <span class="hidden dark:inline iconify" data-icon="lucide:moon" data-width="10" style="color:#4C1D95;"></span>
-          </div>
-        </div>
-        <button onclick="toggleMenu()" class="dyn-text p-1"><span class="iconify" data-icon="lucide:menu" data-width="26"></span></button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu fixed inset-0 z-[99] flex flex-col items-center justify-center gap-6 dark:bg-rp-950/98 bg-white/98 backdrop-blur-xl">
-    <img src="logo.jpeg" alt="EIQAA Logo" class="w-16 h-16 rounded-2xl object-cover mb-2 ring-2 ring-gm-400/50">
-    <button onclick="toggleMenu()" class="absolute top-5 left-5 dyn-text p-2"><span class="iconify" data-icon="lucide:x" data-width="28"></span></button>
-    <a href="/" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="الرئيسية" data-en="Home">Home</a>
-    <a href="/#services" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="خدماتنا" data-en="Services">Services</a>
-    <a href="/#about" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="من نحن" data-en="About">About</a>
-    <a href="blog" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="المدونة" data-en="Blog">Blog</a>
-    <a href="ecommerce" onclick="toggleMenu()" class="text-xl dyn-text font-semibold" data-ar="التجارة الإلكترونية" data-en="E-commerce">E-commerce</a>
-    <a href="contact" onclick="toggleMenu()" class="text-xl text-gm-400 font-semibold" data-ar="اتصل بنا" data-en="Contact">Contact</a>
-    <a id="mobileWaBtn" href="#" target="_blank" onclick="toggleMenu()" class="btn-gold bg-gradient-to-l from-gm-600 to-gm-400 text-rp-950 font-bold text-lg px-8 py-3 rounded-xl mt-2" data-ar="📅 احجز جلسة استراتيجية" data-en="📅 Book a Strategy Call">📅 Book a Strategy Call</a>
+  <!-- ===== BG DECOR ===== -->
+  <div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="connect-orb connect-orb-a"></div>
+    <div class="connect-orb connect-orb-b"></div>
+    <div class="connect-orb connect-orb-c"></div>
+    <div class="connect-grid"></div>
   </div>
 
-  <!-- ========== HERO ========== -->
-  <section id="contact-hero" class="relative min-h-[72vh] flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0" style="background: linear-gradient(135deg, rgba(59,10,94,0.9) 0%, rgba(91,33,182,0.84) 100%);"></div>
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 100%, rgba(245,183,0,0.16) 0%, transparent 55%);"></div>
-    <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(rgba(255,255,255,0.9) 1px, transparent 1px); background-size: 34px 34px;"></div>
+  <!-- ===== TOP CONTROLS ===== -->
+  <div class="connect-topbar">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('ar')">AR</button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <span class="toggle-circle"></span>
+    </button>
+  </div>
 
-    <div class="relative z-10 text-center px-5 max-w-5xl mx-auto pt-16 pb-24">
-      <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 border border-gm-400/40 bg-gm-400/10 backdrop-blur-sm">
-        <span class="w-2 h-2 rounded-full bg-gm-400 animate-pulse"></span>
-        <span class="text-xs text-gm-300 font-semibold" data-ar="فريق إيقاع الأثر جاهز للرد" data-en="The EIQAA Team Is Ready To Reply">The EIQAA Team Is Ready To Reply</span>
-      </div>
-      <h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight text-white mb-6">
-        <span data-ar="خلّينا نتكلم عن" data-en="Let's Talk About">Let's Talk About</span>
-        <span class="gradient-text-gold" data-ar="نموّك." data-en="Your Growth.">Your Growth.</span>
-      </h1>
-      <p class="text-base md:text-lg text-rp-100 font-light leading-relaxed max-w-3xl mx-auto mb-8" data-ar="راسلنا عبر النموذج، واتساب، أو اتصال مباشر — وسيرد عليك فريق متخصص خلال أقل من ساعتين في أيام العمل. بدون التزام وبدون ضغط."
-        data-en="Send us a message through the form, WhatsApp, or a direct call — a specialist team replies within 2 hours on business days. No commitment, no pressure.">Send us a message through the form, WhatsApp, or a direct call — a specialist team replies within 2 hours on business days. No commitment, no pressure.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a id="heroWaBtn" href="#" target="_blank" class="btn-gold bg-gm-400 text-rp-950 font-extrabold text-sm px-8 py-4 rounded-xl hover:bg-gm-300 transition-all shadow-lg shadow-gm-500/30 flex items-center gap-2" data-ar="💬 راسلنا على واتساب" data-en="💬 WhatsApp Us Now">💬 WhatsApp Us Now</a>
-        <a href="mailto:Info@eiqaathar.com" class="flex items-center gap-2 border border-white/25 text-white font-semibold text-sm px-8 py-4 rounded-xl hover:bg-white/10 transition-all backdrop-blur-sm" data-ar="📧 أرسل بريداً إلكترونياً" data-en="📧 Email Us Instead">📧 Email Us Instead</a>
-      </div>
-      <p class="text-gm-300 font-semibold text-sm tracking-wide mt-6" data-ar="⚡ متوسط وقت الرد: أقل من ساعتين" data-en="⚡ Average response time: under 2 hours">⚡ Average response time: under 2 hours</p>
-    </div>
-  </section>
+  <!-- ===== MAIN ===== -->
+  <main class="min-h-screen flex items-center justify-center px-4 sm:px-6 py-14 md:py-16">
+    <section class="w-full max-w-[440px] sm:max-w-[480px]">
 
-  <!-- ========== INFO CARDS ========== -->
-  <section id="info" class="relative py-16 md:py-20 px-5">
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 20% 0%, rgba(139,92,246,0.08) 0%, transparent 55%);"></div>
-    <div class="relative max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="tel:+971507044578" class="info-card dyn-card glass-no-lift rounded-2xl p-6 text-center block">
-          <div class="info-icon"><span class="iconify" data-icon="lucide:phone" data-width="24"></span></div>
-          <p class="text-xs font-bold uppercase tracking-wider dyn-text3 mb-2" data-ar="اتصل بنا" data-en="Call Us">Call Us</p>
-          <p class="text-sm md:text-base font-extrabold dyn-text" dir="ltr" style="unicode-bidi:isolate">+971 50 704 4578</p>
-        </a>
-        <a id="infoWaBtn" href="#" target="_blank" class="info-card dyn-card glass-no-lift rounded-2xl p-6 text-center block">
-          <div class="info-icon wa"><span class="iconify" data-icon="mdi:whatsapp" data-width="24"></span></div>
-          <p class="text-xs font-bold uppercase tracking-wider dyn-text3 mb-2" data-ar="واتساب" data-en="WhatsApp">WhatsApp</p>
-          <p class="text-sm md:text-base font-extrabold dyn-text" data-ar="الرد الأسرع" data-en="Fastest Reply">Fastest Reply</p>
-        </a>
-        <a href="mailto:Info@eiqaathar.com" class="info-card dyn-card glass-no-lift rounded-2xl p-6 text-center block">
-          <div class="info-icon"><span class="iconify" data-icon="lucide:mail" data-width="24"></span></div>
-          <p class="text-xs font-bold uppercase tracking-wider dyn-text3 mb-2" data-ar="البريد الإلكتروني" data-en="Email">Email</p>
-          <p class="text-sm md:text-base font-extrabold dyn-text" dir="ltr" style="unicode-bidi:isolate">Info@eiqaathar.com</p>
-        </a>
-        <div class="info-card dyn-card glass-no-lift rounded-2xl p-6 text-center">
-          <div class="info-icon"><span class="iconify" data-icon="lucide:map-pin" data-width="24"></span></div>
-          <p class="text-xs font-bold uppercase tracking-wider dyn-text3 mb-2" data-ar="الموقع وساعات العمل" data-en="Location &amp; Hours">Location &amp; Hours</p>
-          <p class="text-sm md:text-base font-extrabold dyn-text" data-ar="دبي، الإمارات" data-en="Dubai, UAE">Dubai, UAE</p>
-          <p class="text-xs dyn-text3 mt-1" data-ar="الإثنين - الجمعة · 9 صباحاً - 6 مساءً" data-en="Mon – Fri · 9 AM – 6 PM">Mon – Fri · 9 AM – 6 PM</p>
+      <!-- CARD -->
+      <div class="connect-card reveal">
+        <span class="connect-card-glow"></span>
+
+        <!-- LOGO + BRAND -->
+        <div class="flex flex-col items-center text-center pt-10 px-6 sm:px-10">
+          <div class="logo-wrap reveal d1">
+            <img src="logo.jpeg" alt="EIQAA Al Athar Logo" class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-full ring-4 ring-gm-400/60 shadow-2xl shadow-gm-500/30">
+          </div>
+          <p class="mt-3 text-[11px] sm:text-xs font-black tracking-[0.35em] uppercase dyn-text2 reveal d2">EIQAA <span class="gradient-text-gold">AL ATHAR</span></p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ========== FORM + SIDE ========== -->
-  <section id="reach" class="relative py-16 md:py-20 px-5">
-    <div class="max-w-6xl mx-auto">
-      <div class="reveal text-center mb-12">
-        <p class="text-xs font-bold text-gm-400 tracking-[0.25em] uppercase mb-3" data-ar="أرسل رسالتك" data-en="Send Your Message">Send Your Message</p>
-        <h2 class="text-3xl md:text-5xl font-black tracking-tight"><span class="gradient-text" data-ar="أخبرنا" data-en="Tell Us">Tell Us</span> <span class="gradient-text-gold" data-ar="عن مشروعك" data-en="About Your Project">About Your Project</span></h2>
-        <p class="text-sm md:text-base dyn-text3 leading-relaxed max-w-2xl mx-auto mt-4" data-ar="املأ النموذج وسنتواصل معك مباشرة عبر واتساب — أسرع طريقة للرد."
-          data-en="Fill in the form and we'll get back to you directly on WhatsApp — the fastest way to reply.">Fill in the form and we'll get back to you directly on WhatsApp — the fastest way to reply.</p>
-      </div>
+        <!-- HEADING -->
+        <div class="px-6 sm:px-10 mt-5 text-center reveal d3">
+          <h1 class="text-[26px] sm:text-3xl font-black leading-tight dyn-text tracking-tight" data-ar="خلّينا <span class='gradient-text-gold'>نتكلم</span>" data-en="Let's <span class='gradient-text-gold'>Talk</span>">Let's <span class="gradient-text-gold">Talk</span></h1>
+          <p class="mt-2 text-xs sm:text-[13px] dyn-text3 leading-relaxed max-w-xs mx-auto" data-ar="اختر الطريقة اللي تناسبك — واتساب أسرع، أو أرسل رسالتك بالنموذج." data-en="Pick the way that suits you — WhatsApp is fastest, or send us a message below.">Pick the way that suits you — WhatsApp is fastest, or send us a message below.</p>
+        </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <!-- QUICK CONTACTS -->
+        <div class="px-6 sm:px-10 mt-6 space-y-2.5 reveal d4">
+          <a id="cWaBtn" href="#" target="_blank" class="contact-btn">
+            <span class="iconify text-[#25D366]" data-icon="mdi:whatsapp" data-width="20"></span>
+            <span class="flex-1 text-start" data-ar="راسلنا على واتساب" data-en="WhatsApp Us">WhatsApp Us</span>
+            <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="14"></span>
+          </a>
+          <a href="tel:+971507044578" class="contact-btn">
+            <span class="iconify text-rp-400" data-icon="lucide:phone" data-width="20"></span>
+            <span class="flex-1 text-start" dir="ltr" style="unicode-bidi:isolate">+971 50 704 4578</span>
+            <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="14"></span>
+          </a>
+          <a href="mailto:Info@eiqaathar.com" class="contact-btn">
+            <span class="iconify text-rp-500" data-icon="lucide:mail" data-width="20"></span>
+            <span class="flex-1 text-start" dir="ltr" style="unicode-bidi:isolate">Info@eiqaathar.com</span>
+            <span class="iconify dyn-text3" data-icon="lucide:arrow-up-right" data-width="14"></span>
+          </a>
+          <div class="contact-btn cursor-default">
+            <span class="iconify text-gm-500" data-icon="lucide:clock" data-width="20"></span>
+            <span class="flex-1 text-start" data-ar="الإثنين – الجمعة · 9 ص – 6 م" data-en="Mon – Fri · 9 AM – 6 PM (GST)">Mon – Fri · 9 AM – 6 PM (GST)</span>
+          </div>
+        </div>
+
         <!-- FORM -->
-        <div class="lg:col-span-3 dyn-card rounded-2xl p-6 md:p-8">
-          <form id="contactForm" onsubmit="contactSubmit(event)" class="space-y-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="cName" class="field-label" data-ar="الاسم الكامل" data-en="Full Name">Full Name</label>
-                <input id="cName" type="text" required autocomplete="name" placeholder="Ahmed Ali" class="form-input">
-              </div>
-              <div>
-                <label for="cCompany" class="field-label" data-ar="الشركة (اختياري)" data-en="Company (optional)">Company (optional)</label>
-                <input id="cCompany" type="text" autocomplete="organization" placeholder="Company LLC" class="form-input">
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label for="cPhone" class="field-label" data-ar="الهاتف / واتساب" data-en="Phone / WhatsApp">Phone / WhatsApp</label>
-                <input id="cPhone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+971 5X XXX XXXX" class="form-input" dir="ltr">
-              </div>
-              <div>
-                <label for="cEmail" class="field-label" data-ar="البريد الإلكتروني" data-en="Email">Email</label>
-                <input id="cEmail" type="email" required autocomplete="email" placeholder="you@example.com" class="form-input" dir="ltr">
-              </div>
-            </div>
-            <div>
-              <label for="cService" class="field-label" data-ar="ما الذي تحتاجه؟" data-en="What do you need?">What do you need?</label>
-              <select id="cService" class="form-input">
-                <option data-ar="استراتيجية تسويق متكاملة" data-en="Full Marketing Strategy">Full Marketing Strategy</option>
-                <option data-ar="الإعلانات المدفوعة (Meta / Google)" data-en="Paid Ads (Meta / Google)">Paid Ads (Meta / Google)</option>
-                <option data-ar="السوشيال ميديا وإدارة الوسائط" data-en="Social Media Management">Social Media Management</option>
-                <option data-ar="التجارة الإلكترونية والدروب شيبينغ" data-en="E-commerce &amp; Dropshipping">E-commerce &amp; Dropshipping</option>
-                <option data-ar="أتمتة واتساب ومسارات المبيعات" data-en="WhatsApp Automation &amp; Funnels">WhatsApp Automation &amp; Funnels</option>
-                <option data-ar="التصميم والهوية البصرية" data-en="Branding &amp; Creative">Branding &amp; Creative</option>
-                <option data-ar="أخرى" data-en="Other">Other</option>
+        <div class="px-6 sm:px-10 mt-6 pb-2 reveal d5">
+          <p class="text-[10px] font-black uppercase tracking-[0.25em] dyn-text3 text-center mb-3" data-ar="أو أرسل رسالتك هنا" data-en="Or message us here">Or message us here</p>
+          <form id="contactForm" onsubmit="contactSubmit(event)" class="space-y-3">
+            <div class="form-field"><input id="cName" type="text" required placeholder="Name / الاسم" dir="ltr"></div>
+            <div class="form-field"><input id="cPhone" type="tel" required placeholder="Phone / الهاتف" dir="ltr" inputmode="tel" autocomplete="tel"></div>
+            <div class="form-field"><input id="cEmail" type="email" required placeholder="Email / البريد الإلكتروني" dir="ltr" autocomplete="email"></div>
+            <div class="form-field"><input id="cCompany" type="text" placeholder="Company / الشركة (optional)" dir="ltr" autocomplete="organization"></div>
+            <div class="form-field">
+              <select id="cService">
+                <option value="Marketing Strategy" data-ar="استراتيجية تسويق متكاملة" data-en="Marketing Strategy">Marketing Strategy</option>
+                <option value="Paid Ads" data-ar="الإعلانات المدفوعة" data-en="Paid Ads (Meta / Google)">Paid Ads (Meta / Google)</option>
+                <option value="Social Media" data-ar="إدارة السوشيال ميديا" data-en="Social Media Management">Social Media Management</option>
+                <option value="E-commerce" data-ar="التجارة الإلكترونية" data-en="E-commerce & Dropshipping">E-commerce & Dropshipping</option>
+                <option value="WhatsApp Automation" data-ar="أتمتة واتساب" data-en="WhatsApp Automation & Funnels">WhatsApp Automation & Funnels</option>
+                <option value="Branding" data-ar="التصميم والهوية البصرية" data-en="Branding & Creative">Branding & Creative</option>
+                <option value="Other" data-ar="أخرى" data-en="Other">Other</option>
               </select>
             </div>
-            <div>
-              <label for="cMessage" class="field-label" data-ar="رسالتك" data-en="Your Message">Your Message</label>
-              <textarea id="cMessage" rows="4" class="form-input resize-none" placeholder="Tell us about your business and goals..." data-ar-placeholder="أخبرنا عن مشروعك وأهدافك..." data-en-placeholder="Tell us about your business and goals...">Tell us about your business and goals...</textarea>
-            </div>
-            <button type="submit" class="btn-gold w-full bg-gradient-to-l from-gm-600 to-gm-400 text-rp-950 font-extrabold text-sm px-6 py-4 rounded-xl hover:from-gm-500 hover:to-gm-300 transition-all flex items-center justify-center gap-2">
-              <span class="iconify" data-icon="lucide:send" data-width="17"></span>
-              <span data-ar="أرسل الرسالة عبر واتساب" data-en="Send Message via WhatsApp">Send Message via WhatsApp</span>
+            <div class="form-field"><textarea id="cMessage" rows="3" placeholder="Message / رسالتك..." dir="ltr"></textarea></div>
+            <button type="submit" class="btn-gold w-full bg-gm-400 text-rp-950 font-extrabold text-sm px-6 py-3.5 rounded-xl hover:bg-gm-300 transition-all flex items-center justify-center gap-2">
+              <span class="iconify" data-icon="lucide:send" data-width="16"></span>
+              <span data-ar="أرسل عبر واتساب" data-en="Send via WhatsApp">Send via WhatsApp</span>
             </button>
-            <p id="contactMsg" class="hidden text-center text-sm font-bold text-gm-400" data-ar="🎉 شكراً لك! سيُفتح واتساب برسالتك جاهزة — اضغط إرسال." data-en="🎉 Thanks! WhatsApp opened with your message ready — just hit send.">🎉 Thanks! WhatsApp opened with your message ready — just hit send.</p>
-            <p class="text-[11px] dyn-text3 text-center flex items-center justify-center gap-1">
-              <span class="iconify" data-icon="lucide:lock" data-width="11"></span>
-              <span data-ar="معلوماتك آمنة 100% — بدون إزعاج أو التزام." data-en="Your info is 100% private — no spam, no commitment.">Your info is 100% private — no spam, no commitment.</span>
-            </p>
+            <p id="contactMsg" class="hidden text-center text-xs font-bold text-gm-400" data-ar="🎉 تم! واتساب فتح مع رسالتك — اضغط إرسال." data-en="🎉 Done! WhatsApp opened with your message — hit send.">🎉 Done! WhatsApp opened with your message — hit send.</p>
           </form>
         </div>
 
-        <!-- SIDE -->
-        <div class="lg:col-span-2 space-y-4">
-          <div class="dyn-card rounded-2xl p-6">
-            <p class="text-xs font-black dyn-text2 uppercase tracking-wider mb-4" data-ar="قنوات التواصل المفضلة" data-en="Preferred Channels">Preferred Channels</p>
-            <div class="flex items-center gap-3 mb-5">
-              <a href="https://www.facebook.com/share/1EeivBtWdc/" target="_blank" class="w-10 h-10 rounded-xl dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:facebook" data-width="19"></span></a>
-              <a href="https://www.instagram.com/eiqaa_marketing?igsh=YndzeW42NWFvY2p4" target="_blank" class="w-10 h-10 rounded-xl dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:instagram" data-width="19"></span></a>
-              <a href="https://www.tiktok.com/@eiqaamarketing?_r=1&_t=ZS-98T8NvILn50" target="_blank" class="w-10 h-10 rounded-xl dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="simple-icons:tiktok" data-width="18"></span></a>
-              <a href="https://www.linkedin.com/company/eiqaa-al-athar-marketing-management/" target="_blank" class="w-10 h-10 rounded-xl dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:linkedin" data-width="19"></span></a>
-            </div>
-            <div class="space-y-2.5">
-              <p class="text-sm dyn-text3 flex items-center gap-2"><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp" data-width="15"></span><a id="sideWaBtn" href="#" target="_blank" class="hover:text-gm-400 transition-colors font-semibold" data-ar="تواصل عبر واتساب" data-en="WhatsApp Us">WhatsApp Us</a></p>
-              <p class="text-sm dyn-text3 flex items-center gap-2"><span class="iconify" data-icon="lucide:clock" data-width="15"></span><span data-ar="الإثنين - الجمعة · 9 صباحاً - 6 مساءً (بتوقيت الخليج)" data-en="Mon – Fri · 9 AM – 6 PM (GST)">Mon – Fri · 9 AM – 6 PM (GST)</span></p>
-              <p class="text-sm dyn-text3 flex items-center gap-2"><span class="iconify" data-icon="lucide:zap" data-width="15"></span><span data-ar="متوسط الرد: أقل من ساعتين" data-en="Avg. reply: under 2 hours">Avg. reply: under 2 hours</span></p>
-            </div>
-          </div>
-
-          <div class="brand-gradient rounded-2xl p-6 text-center overflow-hidden relative">
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, rgba(245,183,0,0.2) 0%, transparent 60%);"></div>
-            <div class="relative">
-              <span class="text-3xl mb-2 block">📅</span>
-              <p class="text-white font-black text-lg mb-1" data-ar="جلسة استراتيجية مجانية" data-en="Free Strategy Session">Free Strategy Session</p>
-              <p class="text-sm text-rp-100 leading-relaxed mb-4" data-ar="30 دقيقة نراجع فيها تسويقك الحالي ونريك فرص النمو — بدون أي التزام."
-                data-en="30 minutes to review your current marketing and show you growth opportunities — zero commitment.">30 minutes to review your current marketing and show you growth opportunities — zero commitment.</p>
-              <a id="sideCtaWaBtn" href="#" target="_blank" class="btn-gold inline-block bg-gm-400 text-rp-950 font-extrabold text-xs px-6 py-3 rounded-xl hover:bg-gm-300 transition-all" data-ar="احجز جلستك الآن" data-en="Book Yours Now">Book Yours Now</a>
-            </div>
+        <!-- SOCIAL -->
+        <div class="px-6 sm:px-10 mt-5 reveal d6">
+          <p class="text-[10px] font-black uppercase tracking-[0.25em] dyn-text3 text-center mb-3" data-ar="تابعنا على" data-en="Follow Us On">Follow Us On</p>
+          <div class="grid grid-cols-4 gap-3">
+            <a href="https://www.facebook.com/share/1EeivBtWdc/" target="_blank" rel="noopener" class="social-btn social-fb" aria-label="Facebook">
+              <span class="iconify" data-icon="mdi:facebook" data-width="24"></span>
+              <span class="social-label" data-ar="فيسبوك" data-en="Facebook">Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/eiqaa_marketing?igsh=YndzeW42NWFvY2p4" target="_blank" rel="noopener" class="social-btn social-ig" aria-label="Instagram">
+              <span class="iconify" data-icon="mdi:instagram" data-width="24"></span>
+              <span class="social-label" data-ar="انستغرام" data-en="Instagram">Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@eiqaamarketing?_r=1&amp;_t=ZS-98T8NvILn50" target="_blank" rel="noopener" class="social-btn social-tk" aria-label="TikTok">
+              <span class="iconify" data-icon="simple-icons:tiktok" data-width="22"></span>
+              <span class="social-label" data-ar="تيك توك" data-en="TikTok">TikTok</span>
+            </a>
+            <a href="https://www.linkedin.com/company/eiqaa-al-athar-marketing-management/" target="_blank" rel="noopener" class="social-btn social-in" aria-label="LinkedIn">
+              <span class="iconify" data-icon="mdi:linkedin" data-width="24"></span>
+              <span class="social-label" data-ar="لينكد إن" data-en="LinkedIn">LinkedIn</span>
+            </a>
           </div>
         </div>
+
       </div>
-    </div>
-  </section>
 
-  <!-- ========== FAQ ========== -->
-  <section id="faq" class="relative py-16 md:py-20 px-5">
-    <div class="max-w-3xl mx-auto">
-      <div class="reveal text-center mb-12">
-        <p class="text-xs font-bold text-gm-400 tracking-[0.25em] uppercase mb-3" data-ar="الأسئلة الشائعة" data-en="FAQ">FAQ</p>
-        <h2 class="text-3xl md:text-5xl font-black tracking-tight"><span class="gradient-text" data-ar="أسئلة عن" data-en="Questions About">Questions About</span> <span class="gradient-text-gold" data-ar="التواصل" data-en="Getting In Touch">Getting In Touch</span></h2>
+      <!-- BACK LINKS -->
+      <div class="flex items-center justify-center gap-4 mt-5 reveal d7">
+        <a href="." class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold dyn-text3 hover:text-gm-400 transition-colors">
+          <span class="iconify" data-icon="lucide:globe" data-width="13"></span>
+          <span data-ar="الموقع الرئيسي" data-en="Main Site">Main Site</span>
+        </a>
+        <span class="dyn-text3 text-xs">·</span>
+        <a href="connect" class="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold dyn-text3 hover:text-gm-400 transition-colors">
+          <span class="iconify" data-icon="lucide:link" data-width="13"></span>
+          <span data-ar="صفحة التواصل" data-en="Connect Page">Connect Page</span>
+        </a>
       </div>
-      <div class="space-y-3">
-        <div class="faq-item dyn-card rounded-xl px-5 py-4">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between gap-4 text-start">
-            <span class="text-sm md:text-base font-bold dyn-text" data-ar="كم يستغرق الرد على رسالتي؟" data-en="How fast will you reply to my message?">How fast will you reply to my message?</span>
-            <span class="faq-icon iconify shrink-0 text-gm-400" data-icon="lucide:plus" data-width="18"></span>
-          </button>
-          <div class="faq-answer"><p class="text-sm dyn-text2 leading-relaxed pt-3" data-ar="نرد خلال أقل من ساعتين في أيام العمل (الإثنين - الجمعة، 9 صباحاً - 6 مساءً بتوقيت الخليج). الواتساب هو أسرع قناة عادة."
-            data-en="We reply within 2 hours on business days (Mon – Fri, 9 AM – 6 PM GST). WhatsApp is usually the fastest channel.">We reply within 2 hours on business days (Mon – Fri, 9 AM – 6 PM GST). WhatsApp is usually the fastest channel.</p></div>
-        </div>
-        <div class="faq-item dyn-card rounded-xl px-5 py-4">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between gap-4 text-start">
-            <span class="text-sm md:text-base font-bold dyn-text" data-ar="هل الخدمات متاحة لشركات خارج دبي؟" data-en="Do you work with businesses outside Dubai?">Do you work with businesses outside Dubai?</span>
-            <span class="faq-icon iconify shrink-0 text-gm-400" data-icon="lucide:plus" data-width="18"></span>
-          </button>
-          <div class="faq-answer"><p class="text-sm dyn-text2 leading-relaxed pt-3" data-ar="نعم، نخدم عملاء في جميع أنحاء الإمارات والخليج والعالم عبر الاجتماعات عن بُعد وأنظمة عمل واضحة."
-            data-en="Yes, we serve clients across the UAE, the Gulf and worldwide through remote meetings and clear working systems.">Yes, we serve clients across the UAE, the Gulf and worldwide through remote meetings and clear working systems.</p></div>
-        </div>
-        <div class="faq-item dyn-card rounded-xl px-5 py-4">
-          <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between gap-4 text-start">
-            <span class="text-sm md:text-base font-bold dyn-text" data-ar="هل الجلسة الاستراتيجية مجانية فعلاً؟" data-en="Is the strategy session really free?">Is the strategy session really free?</span>
-            <span class="faq-icon iconify shrink-0 text-gm-400" data-icon="lucide:plus" data-width="18"></span>
-          </button>
-          <div class="faq-answer"><p class="text-sm dyn-text2 leading-relaxed pt-3" data-ar="نعم، 30 دقيقة مجانية بالكامل وبدون أي التزام. نراجع وضعك الحالي ونحدد لك أماكن فرص النمو."
-            data-en="Yes, 30 minutes completely free and with zero commitment. We review your current situation and point out your growth opportunities.">Yes, 30 minutes completely free and with zero commitment. We review your current situation and point out your growth opportunities.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ========== FINAL CTA ========== -->
-  <section class="relative py-24 px-5 brand-gradient text-center overflow-hidden">
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 50% 0%, rgba(245,183,0,0.18) 0%, transparent 60%);"></div>
-    <div class="relative max-w-3xl mx-auto reveal">
-      <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight mb-6" data-ar="جاهز نحطّ التسويق على الطريق الصح؟"
-        data-en="Ready To Put Your Marketing On The Right Track?">Ready To Put Your Marketing On The Right Track?</h2>
-      <p class="text-sm md:text-base text-rp-100 leading-relaxed max-w-2xl mx-auto mb-8" data-ar="تواصل معنا الآن وابدأ بجلسة استراتيجية مجانية — سنحول ميزانيتك من مصروف إلى استثمار تُقاس نتائجه."
-        data-en="Reach out now and start with a free strategy session — we'll turn your budget from an expense into results you can measure.">Reach out now and start with a free strategy session — we'll turn your budget from an expense into results you can measure.</p>
-      <a id="finalWaBtn" href="#" target="_blank" class="btn-gold inline-block bg-gm-400 text-rp-950 font-black text-base md:text-lg px-10 md:px-14 py-4 md:py-5 rounded-2xl hover:bg-gm-300 transition-all shadow-2xl shadow-black/30" data-ar="📅 احجز جلستك المجانية" data-en="📅 Book Your Free Session">📅 Book Your Free Session</a>
-      <p class="text-xs text-rp-200 mt-5" data-ar="⚡ متوسط وقت الرد: أقل من ساعتين" data-en="⚡ Average response time: under 2 hours">⚡ Average response time: under 2 hours</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="border-t py-14 px-5" style="border-color:var(--border);">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
-        <div class="lg:col-span-2">
-          <div class="flex items-center gap-2.5 mb-4">
-            <img src="logo.jpeg" alt="EIQAA Al Athar Logo" class="w-9 h-9 rounded-lg object-cover ring-2 ring-rp-400/40">
-            <span class="dyn-text font-extrabold">EIQAA <span class="gradient-text-gold">AL ATHAR</span></span>
-          </div>
-          <p class="text-sm dyn-text3 leading-relaxed max-w-sm mb-4" data-ar="تسويق يصنع أثراً قابلاً للقياس. شريك نمو في دبي يبني أنظمة تسويقية تحوّل الاستراتيجية إلى إيرادات."
-            data-en="Marketing that creates measurable impact. A Dubai-based growth partner building marketing systems that turn strategy into revenue.">Marketing that creates measurable impact. A Dubai-based growth partner building marketing systems that turn strategy into revenue.</p>
-          <div class="flex items-center gap-3">
-            <a href="https://www.facebook.com/share/1EeivBtWdc/" target="_blank" class="w-9 h-9 rounded-lg dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:facebook" data-width="18"></span></a>
-            <a href="https://www.instagram.com/eiqaa_marketing?igsh=YndzeW42NWFvY2p4" target="_blank" class="w-9 h-9 rounded-lg dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:instagram" data-width="18"></span></a>
-            <a href="https://www.tiktok.com/@eiqaamarketing?_r=1&_t=ZS-98T8NvILn50" target="_blank" class="w-9 h-9 rounded-lg dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="simple-icons:tiktok" data-width="18"></span></a>
-            <a href="https://www.linkedin.com/company/eiqaa-al-athar-marketing-management/" target="_blank" class="w-9 h-9 rounded-lg dyn-card border flex items-center justify-center transition-all hover:scale-110 hover:border-gm-400/50"><span class="iconify dyn-text2" data-icon="mdi:linkedin" data-width="18"></span></a>
-          </div>
-        </div>
-        <div>
-          <p class="text-xs font-black dyn-text2 uppercase tracking-wider mb-4" data-ar="روابط سريعة" data-en="Quick Links">Quick Links</p>
-          <div class="space-y-2.5">
-            <a href="/" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="الرئيسية" data-en="Home">Home</a>
-            <a href="/#services" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="خدماتنا" data-en="Services">Services</a>
-            <a href="blog" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="المدونة" data-en="Blog">Blog</a>
-            <a href="ecommerce" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="التجارة والدروب شيبينغ" data-en="E-commerce &amp; Dropshipping">E-commerce &amp; Dropshipping</a>
-            <a href="/#results" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="النتائج" data-en="Results">Results</a>
-          </div>
-        </div>
-        <div>
-          <p class="text-xs font-black dyn-text2 uppercase tracking-wider mb-4" data-ar="تواصل معنا" data-en="Contact">Contact</p>
-          <div class="space-y-2.5">
-            <a href="connect" class="block text-sm dyn-text3 hover:text-gm-400 transition-colors" data-ar="تواصل" data-en="Connect">Connect</a>
-            <p class="text-sm dyn-text3 flex items-center gap-2"><span class="iconify" data-icon="lucide:map-pin" data-width="14"></span><span data-ar="دبي، الإمارات" data-en="Dubai, UAE">Dubai, UAE</span></p>
-            <a href="tel:+971507044578" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify" data-icon="lucide:phone" data-width="14"></span><span dir="ltr" style="unicode-bidi:isolate">+971 50 704 4578</span></a>
-            <a href="mailto:Info@eiqaathar.com" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify" data-icon="lucide:mail" data-width="14"></span>Info@eiqaathar.com</a>
-            <a id="footerWaBtn" href="#" target="_blank" class="text-sm dyn-text3 flex items-center gap-2 hover:text-gm-400 transition-colors"><span class="iconify text-[#25D366]" data-icon="mdi:whatsapp" data-width="14"></span><span data-ar="تواصل عبر واتساب" data-en="WhatsApp Us">WhatsApp Us</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="border-t pt-6 text-center" style="border-color:var(--border);">
-        <p class="text-xs dyn-text3"><span data-ar="© 2025 إيقاع الأثر لإدارة التسويق. جميع الحقوق محفوظة." data-en="© 2025 EIQAA Al Athar Marketing Management. All rights reserved.">© 2025 EIQAA Al Athar Marketing Management. All rights reserved.</span></p>
-      </div>
-    </div>
-  </footer>
+  <script src="assets/connect-script.js"></script>
+  <script>
+    // ===== CONTACT FORM =====
+    const WA_NUMBER = '971507044578';
+    function waLink(text) { return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`; }
 
-  <!-- ========== FLOATING WHATSAPP ========== -->
-  <div class="fixed bottom-6 right-6 z-[100] flex items-center gap-2">
-    <a id="waFloatBtn" href="#" target="_blank" class="wa-pulse w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
-      <span class="iconify text-white" data-icon="mdi:whatsapp" data-width="28"></span>
-    </a>
-  </div>
+    // WA quick link
+    (function() {
+      var m = currentLang === 'ar' ? 'مرحباً إيقاع الأثر 👋، أرغب في حجز استشارة استراتيجية مجانية.' : 'Hello EIQAA Al Athar 👋, I would like to book a free strategy consultation.';
+      var el = document.getElementById('cWaBtn');
+      if (el) el.href = waLink(m);
+    })();
 
-  <script src="assets/contact-script.js"></script>
+    function contactSubmit(e) {
+      e.preventDefault();
+      var name = document.getElementById('cName').value.trim();
+      var phone = document.getElementById('cPhone').value.trim();
+      var email = document.getElementById('cEmail').value.trim();
+      var company = document.getElementById('cCompany').value.trim();
+      var service = document.getElementById('cService').value.trim();
+      var message = document.getElementById('cMessage').value.trim();
+
+      var lines = ['Hello EIQAA Al Athar 👋', 'Name: ' + name];
+      if (company) lines.push('Company: ' + company);
+      lines.push('Phone: ' + phone);
+      if (email) lines.push('Email: ' + email);
+      lines.push('Need: ' + service);
+      if (message) lines.push('Message: ' + message);
+
+      window.open(waLink(lines.join('\n')), '_blank');
+      var ok = document.getElementById('contactMsg');
+      ok.classList.remove('hidden');
+      e.target.reset();
+      setTimeout(function(){ ok.classList.add('hidden'); }, 6000);
+    }
+  </script>
 </body>
 </html>
